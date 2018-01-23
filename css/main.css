@@ -1513,7 +1513,7 @@ header .logo a {
  * header styles
  * ---------------------------------------------------------------
  */
- @media screen and (max-width:1300px) {
+ @media only screen and (max-width:1300px) {
    header .top-bar {
      left: 30%;
    }
