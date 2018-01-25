@@ -3014,5 +3014,75 @@ footer .copyright span:last-child::after {
 #go-top a:hover {
   background: #000000;
 }
+#go-back a i {
+  font-size: 1.6rem;
+  line-height: inherit;
+}
 
+#go-back a:hover {
+  background: #000000;
+}
+#go-next a i {
+  font-size: 1.6rem;
+  line-height: inherit;
+}
+
+#go-next a:hover {
+  background: #000000;
+}
+#go-back{
+  z-index:100;
+  position:absolute;
+  left:5%;
+bottom:-0.2%;
+
+}
+#go-back a{
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  height: 6.6rem;
+  width: 8rem;
+  line-height: 6.6rem;
+  text-align: center;
+  background: #cc005f;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#go-next{
+  z-index:100;
+  position:absolute;
+  left:88.5%;
+bottom:-0.2%;
+}
+#go-next a{
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  height: 6.6rem;
+  width: 8rem;
+  line-height: 6.6rem;
+  text-align: center;
+  background: #cc005f;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.card{
+  display:block;
+  background-color:white;
+  max-width:!300px;
+
+}
 /*# sourceMappingURL=main.css.map */
