@@ -1515,7 +1515,7 @@ header .logo a {
  */
  @media only screen and (max-width:1300px) {
    header .top-bar {
-     left: 30%;
+     left: 40%;
    }
  }
 @media only screen and (max-width:1024px) {
