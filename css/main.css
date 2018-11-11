@@ -1244,10 +1244,10 @@ header .row {
 header .top-bar {
   display: block;
   background: #000000;
-  min-width: 220px;
+  width: 230px;
   min-height: 66px;
-  position: absolute;
-  left: 40%;
+  margin-right: auto;
+  margin-left: auto;
   top: 0;
 }
 
