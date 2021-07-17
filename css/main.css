@@ -1998,6 +1998,11 @@ background: #f8f8f8 no-repeat center bottom;
   text-align: left;
   margin-top: 3%;
 }
+#project .description p {
+ font-family: "poppins-regular", sans-serif !important;
+ font-size: 1.6rem;
+ color: #888888;
+}
 /* contact form */
 
 .contact-form {
