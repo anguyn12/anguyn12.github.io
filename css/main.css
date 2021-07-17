@@ -1989,7 +1989,15 @@ background: #f8f8f8 no-repeat center bottom;
 #contact .section-intro p {
   color: rgba(255, 255, 255, 0.7);
 }
-
+#project {
+  margin-top: 5%;
+}
+#project .description {
+  float: left;
+  width: 35%;
+  text-align: left;
+  margin-top: 3%;
+}
 /* contact form */
 
 .contact-form {
