@@ -1,39 +1,4 @@
-/**
- * ===================================================================
- *
- *  Kards v1.0 Main Stylesheet
- *  url: styleshout.com
- *  03-01-2016
- *  ------------------------------------------------------------------
- *  TOC:
- *  01. webfonts and iconfonts
- *  02. base style overrides
- *  03. typography & general theme styles
- *  04. preloader
- *  05. forms
- *  06. buttons
- *  07. other components
- *  08. common styles
- *  09. header styles
- *  10. intro
- *  11. about
- *  12. resume
- *  13. portfolio
- *  14. call-to-action section
- *  15. services
- *  16. stats
- *  17. contact
- *  18. footer
- *
- * ===================================================================
- */
 
-/**
- * ===================================================================
- * 01. webfonts and iconfonts - (_document-setup.scss)
- *
- * -------------------------------------------------------------------
- */
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import url("fonts.css");
 @import url("font-awesome/css/font-awesome.min.css");
@@ -72,7 +37,7 @@ html, body {
 }
 
 body {
-  background: #151515;
+  background: #fff;
   font-family: "lora-regular", serif;
   font-size: 1.7rem;
   line-height: 3rem;
@@ -769,17 +734,15 @@ button.large, .button.large {
 
 button.stroke, .button.stroke {
   background: transparent !important;
-  border: 3px solid #313131;
+  border: 3px solid #333;
   line-height: 4.8rem;
 }
 .button-vr.stroke{
   background: transparent !important;
-  border: 3px solid #cc005f;
+  border: 3px solid #333;
   line-height: 4.8rem;
 }
-.button-vr{
-  background: (255,255,255,0.3)
-}
+
 button.stroke.medium, .button.stroke.medium {
   line-height: 5.1rem !important;
 }
@@ -793,8 +756,8 @@ button.stroke:hover, .button.stroke:hover {
   color: #cc005f;
 }
 .button-vr:hover {
-  background: #cc005f !important;
-  color: black !important;
+  border: 3px solid #cc005f;
+  color: #cc005f;
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
@@ -1182,7 +1145,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-bottom: 3.6rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -1414,6 +1377,19 @@ header .logo a {
   clear: both;
   display: none;
 }
+.startup-content {
+transition: 0.3s;
+  font-family: "poppins-medium", sans-serif;
+  padding: 2rem 2rem;
+  margin-bottom: 6rem;
+
+}
+.startup-content img{
+margin-bottom: 1rem;
+}
+.startup-content:hover {
+  box-shadow: 0 12px 24px 0 rgba(204,0,95,0.2);
+}
 
 .main-navigation>li {
   display: block;
@@ -1563,7 +1539,7 @@ header .logo a {
  */
 
 #intro {
-background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
+background: #f8f8f8 no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -1596,7 +1572,7 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
 }
 
 .intro-content h1 {
-  color: #FFFFFF;
+  color: #333333;
   font-family: "poppins-medium", sans-serif;
   font-size: 8.4rem;
   line-height: 1.071;
@@ -1605,7 +1581,6 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
   margin-bottom: .6rem;
   margin-left: 0;
   margin-right: auto;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   text-align: left;
 }
 
@@ -1626,8 +1601,7 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
   line-height: 2.4rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  color: #FFFFFF;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  color: #333;
 }
 
 .intro-content .intro-position span {
@@ -1639,7 +1613,7 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
   text-align: center;
   display: inline-block;
   padding: 0 8px 0 14px;
-  color: rgba(255, 255, 255, 0.3);
+  color:#333;
 }
 
 .intro-content .intro-position span:first-child::before {
@@ -1647,12 +1621,12 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
   text-align: center;
   display: inline-block;
   padding: 0 14px 0 8px;
-  color: rgba(255, 255, 255, 0.3);
+  color: #333;
 }
 
 .intro-content .button, .button-vr {
-  color: #FFFFFF !important;
-  border-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  border-color:#333;
   height: 6rem !important;
   line-height: 5.4rem !important;
   padding: 0 3.5rem 0 3rem !important;
@@ -1666,16 +1640,7 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
   border-color: #cc005f;
 }
 
-.intro-content .button::after {
-  display: inline-block;
-  content: "\f107";
-  font-family: fontAwesome;
-  font-size: 1.6rem;
-  line-height: inherit;
-  text-align: center;
-  position: relative;
-  left: 1.2rem;
-}
+
 
 .intro-social {
   display: block;
@@ -1695,7 +1660,7 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
 }
 
 .intro-social li a, .intro-social li a:visited {
-  color: #FFFFFF;
+  color: #333;
 }
 
 .intro-social li a:hover, .intro-social li a:focus {
@@ -1806,50 +1771,6 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
   padding-left: 13rem;
 }
 
-.about-content {
-  position: relative;
-  text-align: left;
-  max-width: 850px;
-  margin-bottom: 3.6rem;
-}
-
-.about-content h3 {
-  font-family: "poppins-bold", sans-serif;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: .25rem;
-}
-
-.about-content .info-list {
-  list-style: none;
-  margin-left: 0;
-}
-
-.about-content .info-list li {
-  padding: 0 0 1.5rem 0;
-  margin-bottom: .6rem;
-}
-
-.about-content .info-list li strong {
-  font-family: "poppins-bold", sans-serif;
-  color: #313131;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  font-size: 1.5rem;
-  line-height: 3rem;
-}
-
-.about-content .info-list li span {
-  display: block;
-  font-family: "poppins-regular", sans-serif;
-  color: #888888;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-.about-content .skill-bars {
-  margin-top: 6rem;
-}
 
 .button-section {
   text-align: center;
@@ -1923,602 +1844,16 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
  * -------------------------------------------------------------------
  */
 
-#resume {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-}
 
-#resume .resume-header {
-  text-align: center;
-}
-
-#resume .resume-header h2 {
-  color: #cc005f;
-}
-
-#resume .resume-timeline {
-  max-width: 980px;
-}
-
-#resume .timeline-wrap {
-  position: relative;
-  margin-top: 1.5rem;
-  margin-bottom: 6rem;
-}
-
-#resume .timeline-wrap::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  left: 35%;
-  top: 0;
-}
-
-#resume .timeline-block {
-  position: relative;
-  padding-top: 1.5rem;
-}
-
-#resume .timeline-ico {
-  height: 4.8rem;
-  width: 4.8rem;
-  line-height: 4.8rem;
-  background: #313131;
-  border-radius: 50%;
-  text-align: center;
-  color: #FFFFFF;
-  position: absolute;
-  left: 35%;
-  top: .9rem;
-  margin-left: -2.4rem;
-}
-
-#resume .timeline-ico i {
-  position: relative;
-  left: .05rem;
-  top: .2rem;
-}
-#project {
-  margin-top: 5%;
-}
-#resume .timeline-header,#project .description {
-  float: left;
-  width: 35%;
-  text-align: left;
-  margin-top: 3%;
-}
-
-#resume .timeline-header h3 {
-  margin-bottom: 0;
-}
-
-#resume .timeline-header p, #project .description p {
-  font-family: "poppins-regular", sans-serif !important;
-  font-size: 1.6rem;
-  color: #888888;
-}
-
-#resume .timeline-content {
-  margin-left: 35%;
-  padding-left: 60px;
-}
-
-#resume .timeline-content h4 {
-  position: relative;
-  padding-bottom: 1.8rem;
-}
-
-#resume .timeline-content h4::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 50px;
-  background: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-/**
- * responsive:
- * resume
- * -------------------------------------------------------------------
- */
-
-@media only screen and (max-width:1024px) {
-  #resume .timeline-header,#project .description  {
-    padding-right: 50px;
-  }
-  #resume .timeline-header h3 {
-    font-size: 1.8rem;
-  }
-  #resume .timeline-header p, #project .description p {
-    font-size: 1.4rem;
-  }
-  #resume .timeline-content {
-    padding-left: 50px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  #resume .timeline-wrap::before {
-    left: 2.4rem;
-  }
-  #resume .timeline-ico {
-    left: 2.4rem;
-  }
-  #resume .timeline-header, #project .description {
-    float: none;
-    width: auto;
-    padding-right: 15px;
-    text-align: left;
-  }
-  #resume .timeline-header h3 {
-    font-size: 2rem;
-  }
-  #resume .timeline-header p, #project .description p {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  #resume .timeline-content {
-    margin: 0;
-  }
-  #resume .timeline-content h4 {
-    padding-bottom: 0;
-    padding-top: 2.1rem;
-    margin-bottom: .6rem;
-    font-size: 1.7rem;
-  }
-  #resume .timeline-content h4::after {
-    bottom: auto;
-    top: 0;
-  }
-  #resume .timeline-header, #resume .timeline-content, #project .description {
-    padding-left: 7rem;
-  }
-}
-
-@media only screen and (max-width:480px) {
-  #resume .resume-header h2 {
-    font-size: 2.2rem;
-  }
-  #resume .timeline-wrap::before {
-    left: 1.8rem;
-  }
-  #resume .timeline-ico {
-    height: 3.6rem;
-    width: 3.6rem;
-    line-height: 3.6rem;
-    left: 1.8rem;
-    margin-left: -1.8rem;
-    font-size: 1.5rem;
-  }
-  #resume .timeline-header, #resume .timeline-content, #project .description {
-    padding-left: 5.5rem;
-  }
-}
-
-/**
- * ===================================================================
- * 13. portfolio - (_layout.scss)
- *
- * -------------------------------------------------------------------
- */
-
-#portfolio {
+#portfolio, #startup, #vr {
   background: #FFFFFF;
-  padding-top: 12rem;
+    padding-top: 12rem;
   padding-bottom: 12rem;
+  margin-top: 12rem;
+  margin: auto;
+  max-width:1080px;
 }
 
-#portfolio .folio-item {
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-#portfolio .folio-item img {
-  vertical-align: middle;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-#portfolio .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-#portfolio .folio-item-table {
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-
-#portfolio .folio-item-cell {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  position: relative;
-  left: -100%;
-}
-
-#portfolio .folio-title {
-  color: #FFFFFF;
-  font-size: 3.3rem;
-  padding: 0 3rem;
-  margin-bottom: 0;
-}
-
-#portfolio .folio-types {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-family: "poppins-regular", sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: .1rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-#portfolio .folio-item:hover .overlay {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-#portfolio .folio-item:hover .folio-item-cell {
-  left: 0;
-}
-
-#portfolio .folio-item:hover img {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-/**
- * responsive:
- * portfolio
- * -------------------------------------------------------------------
- */
-
-@media only screen and (max-width:1024px) {
-  #portfolio .folio-title {
-    font-size: 3.1rem;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  #portfolio .folio-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media only screen and (max-width:400px) {
-  #portfolio .folio-title {
-    font-size: 2.2rem;
-  }
-}
-
-/**
- * Popup Modal - (_layout.scss)
- * ------------------------------------------------------------------
- */
-
-.popup-modal {
-  max-width: 550px;
-  background: #FFFFFF;
-  position: relative;
-  margin: 0 auto;
-}
-
-.popup-modal .media {
-  position: relative;
-}
-
-.popup-modal img {
-  vertical-align: bottom;
-}
-
-.popup-modal .description-box {
-  padding: 1.8rem 3.6rem 3rem;
-}
-
-.popup-modal .description-box h4 {
-  font-family: "poppins-bold", sans-serif;
-  font-size: 1.5rem;
-  line-height: 2.4rem;
-  margin-bottom: .6rem;
-}
-
-.popup-modal .description-box p {
-  font-family: "poppins-regular", sans-serif;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  margin-bottom: 12px;
-}
-
-.popup-modal .categories {
-  font-family: "poppins-bold", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  display: block;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.popup-modal .link-box {
-  width: 100%;
-  overflow: hidden;
-  background: #000000;
-}
-
-.popup-modal .link-box a {
-  font-family: "poppins-bold", sans-serif;
-  font-size: 1.2rem;
-  line-height: 6rem;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  float: left;
-  width: 50%;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.popup-modal .link-box a:first-child {
-  border-right: 1px solid rgba(200, 200, 200, 0.1);
-}
-
-.popup-modal .link-box a:hover {
-  background: #cc005f;
-  border: none;
-}
-
-@media only screen and (max-width:600px) {
-  .popup-modal {
-    width: auto;
-    margin: 0 20px;
-  }
-}
-
-/**
- * transition effect for modal popup - (_layout.scss)
- * ------------------------------------------------------------------
- */
-
-/* overlay at start */
-
-.mfp-fade.mfp-bg {
-  opacity: 0;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-/* overlay animate in */
-
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: .9;
-}
-
-/* overlay animate out */
-
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-
-/* content at start */
-
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-/* content animate in */
-
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
-/* content animate out */
-
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-/**
- * ===================================================================
- * 14. call-to-action section - (_layout.scss)
- *
- * -------------------------------------------------------------------
- */
-
-#cta {
-  padding-top: 10.2rem;
-  padding-bottom: 9rem;
-  text-align: center;
-}
-
-#cta p.lead {
-  color: #6e6e6e;
-}
-
-.cta-content {
-  max-width: 640px;
-}
-
-.cta-thumb {
-  display: inline-block;
-  margin-bottom: 1.2rem;
-}
-
-.cta-thumb img {
-  height: 7.8rem;
-  width: 7.8rem;
-  border-radius: 50%;
-}
-
-/**
- * section ads - (_layout.scss)
- * -------------------------------------------------------------------
- */
-
-.section-ads h2 {
-  position: relative;
-  padding-bottom: 2.1rem;
-}
-
-.section-ads h2::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 80px;
-  background: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  margin-left: -40px;
-}
-
-.section-ads h2 a, .section-ads h2 a:visited {
-  color: #313131;
-}
-
-.section-ads span {
-  color: #3F0D39;
-}
-
-/**
- * responsive:
- * cta
- * -------------------------------------------------------------------
- */
-
-@media only screen and (max-width:650px) {
-  .cta-content {
-    max-width: 650px;
-  }
-  .cta-content h2 {
-    font-size: 2.4rem;
-  }
-}
-
-/**
- * ===================================================================
- * 15. services - (_layout.scss)
- *
- * -------------------------------------------------------------------
- */
-
-#services {
-  background: #313131 url(../images/bg.jpg) no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  color: white;
-  position: relative;
-}
-
-#services .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #151515;
-  opacity: .9;
-}
-
-#services .section-intro {
-  margin-bottom: 1.8rem;
-}
-
-#services .section-intro h1 {
-  color: white;
-}
-
-#services .section-intro h5 {
-  color: #cc005f;
-}
-
-#services .section-intro p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.services-content {
-  max-width: 1200px;
-}
-
-.services-list {
-  margin-top: 1.2rem;
-  text-align: center;
-}
-
-.services-list .service {
-  margin-bottom: 1.2rem;
-  padding: 0 30px;
-}
-
-.services-list .icon {
-  display: inline-block;
-  margin-bottom: 2.1rem;
-}
-
-.services-list .icon i {
-  font-size: 5.4rem;
-  color: #cc005f;
-}
-
-.services-list h3 {
-  color: #FFFFFF;
-}
-
-.services-list .desc {
-  color: rgba(255, 255, 255, 0.6);
-}
 
 /* pagination */
 
@@ -2590,6 +1925,9 @@ background: #151515 url(../images/intro-bg.png) no-repeat center bottom;
   margin-bottom: 0;
   font-family: "poppins-medium", sans-serif;
   color: white;
+}
+.section-intro p {
+  font-family: "poppins-medium", sans-serif;
 }
 
 #stats .stat-title {
