@@ -1847,11 +1847,11 @@ background: #f8f8f8 no-repeat center bottom;
 
 #portfolio, #startup, #vr {
   background: #FFFFFF;
-    padding-top: 12rem;
-  padding-bottom: 12rem;
-  margin-top: 12rem;
+    padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-top: 6rem;
   margin: auto;
-  max-width:1080px;
+  max-width:1300px;
 }
 
 
