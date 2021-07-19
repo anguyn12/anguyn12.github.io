@@ -1847,9 +1847,9 @@ background: #f8f8f8 no-repeat center bottom;
 
 #portfolio, #startup, #vr {
   background: #FFFFFF;
-    padding-top: 6rem;
-  padding-bottom: 6rem;
-  margin-top: 6rem;
+    padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
   margin: auto;
   max-width:1300px;
 }
@@ -1939,7 +1939,11 @@ background: #f8f8f8 no-repeat center bottom;
  * stats
  * -------------------------------------------------------------------
  */
-
+ .reverse {
+   -webkit-flex-direction: row;
+flex-direction:    row;
+display: flex;
+ }
 @media only screen and (max-width:1024px) {
   #stats .stat:nth-child(n) {
     border-left: 1px solid rgba(255, 255, 255, 0.12);
@@ -1957,11 +1961,16 @@ background: #f8f8f8 no-repeat center bottom;
   #stats .stat:nth-child(2n+1) {
     border: none;
   }
+
 }
 
 @media only screen and (max-width:600px) {
   #stats .stat:nth-child(n) {
     border: none;
+  }
+  .reverse {
+    -webkit-flex-direction: column-reverse !important;
+ flex-direction:  column-reverse !important;
   }
 }
 
@@ -1998,7 +2007,7 @@ background: #f8f8f8 no-repeat center bottom;
   text-align: left;
   margin-top: 3%;
 }
-#project .description p {
+#project .description p, .description p {
  font-family: "poppins-regular", sans-serif !important;
  font-size: 1.6rem;
  color: #888888;
