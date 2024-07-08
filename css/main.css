@@ -1606,7 +1606,7 @@ background: #f8f8f8 no-repeat center bottom;
   margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .intro-content .intro-position {
