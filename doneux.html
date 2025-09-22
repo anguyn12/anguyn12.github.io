@@ -34,13 +34,24 @@
   <!-- favicons
 	================================================== -->
   <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Local Poppins (embed local font files) -->
+  <link rel="stylesheet" href="fonts/poppins/stylesheet.css">
+
+  <!-- Scroll-to-Explore styles moved to css/main.css -->
 
 </head>
 
 <body id="top">
 
+  <!-- Side anchor navigation -->
+  <nav id="sideAnchorNav" class="side-anchor-nav" aria-label="Section navigation">
+    <a href="#highlight" data-target="highlight" title="Highlight">Highlight</a>
+    <a href="#portfolio" data-target="portfolio" title="Portfolio">Portfolio</a>
+    <a href="#contact" data-target="contact" title="Contact">Contact</a>
+  </nav>
+
   <!-- header
-   ================================================== -->
+   ==================================================
   <header>
     <div class="row">
 
@@ -52,7 +63,7 @@
         </div>
 
         <nav id="main-nav-wrap">
-          <!--  <ul class="main-navigation">
+           <ul class="main-navigation">
             <li class="current"><a class="smoothscroll" href="./doneux.html" title="">Home</a></li>
             <li><a class="smoothscroll" href="./doneux.html#portfolio" title="">Portfolio</a></li>
             <li><a class="smoothscroll" href="https://dawnuxi.com/xrproject.html" title="">XR works</a></li>
@@ -65,8 +76,7 @@
 
     </div>
     <!-- /row -->
-  </header>
-  <!-- /header -->
+  </header> 
 
   <!-- intro section
    ================================================== -->
@@ -83,8 +93,8 @@
 
         <div class="col-twelve">
 
-          <h5>Hello, I'm Dawn! A UX leader and entrepreneur</h5>
-          <h1 href="" class="typewrite" data-period="2000" data-type='["I design experiences that bring value to people and society", "transform business with innovation and strategy", "lead team and influence leaders to maximize potential"]'>
+          <h5>Hello, I'm Dawn!</h5>
+          <h1 href="" class="typewrite" data-period="2000" data-type='["I design experience that bring value to my users", "I transform business with innovation and strategy", "I lead team and influence leaders to maximize potential"]'>
             <span class="wrap"></span>
           </h1>
 
@@ -110,36 +120,107 @@
       <li><a href="https://dribbble.com/dawnux"><i class="fa fa-dribbble"></i></a></li>
     </ul>
    /intro-social -->
-
+  <div class="scroll-explore" aria-hidden="false">
+    <button class="btn" id="scrollExploreBtn" aria-label="Scroll to explore">Scroll to Explore
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 5v14" stroke="#cc005f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 12l-7 7-7-7" stroke="#cc005f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
   </section>
   <!-- /intro -->
-  <section id="vr-intro">
-
-  </section>
 
 
-  <section id="startup">
+  <section id="highlight">
 
     <div class="row section-intro">
       <div class="col-twelve">
-
-        <h5>LATEST HIGHLIGHT OF MY WORKS</h5>
-        <p>Interactive stage experience at SIGGRAPH 2023 & 2024 with 10,000+ participants each year.</p>
-
-      </div>
-
-    </div>
-
-    <div class="row">
-      <div class="col-twelve">
-<video src="images\siggraphstage.mp4" width="1920" height="1080" type="video/mp4" autoplay loop preload controls muted></video>
+        <h5>Bounderless Experience Design</h5>
+        <h1>I Design Experiences That Go Beyond 2D Screens</h1>
       </div>
     </div>
+
+    <div class="highlight-panels horizontal">
+      <div class="highlight-track">
+
+      <!-- Panel: Stage -->
+      <article class="panel" data-panel="stage">
+        <div class="panel-body">
+          <video class="panel-media" src="images/siggraphstage.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_Stage</h2>
+          </div>
+            <!-- pagination dots were here; moved outside so they sit above content -->
+        </div>
+      </article>
+
+      <!-- Panel: Data Simulation -->
+      <article class="panel" data-panel="simulation">
+        <div class="panel-body">
+          <img class="panel-media" src="./images/viz.gif" alt="Interactive Prototype">
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_Geospatial Data Simulation</h2>
+          </div>
+        </div>
+      </article>
+
+      <!-- Panel: XR Music -->
+      <article class="panel" data-panel="music">
+        <div class="panel-body">
+          <video class="panel-media" src="assets/xrmusic.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_XR Music</h2>
+          </div>
+        </div>
+      </article>
+                  <!-- Panel: XR Music -->
+      <article class="panel" data-panel="store">
+        <div class="panel-body">
+          <video class="panel-media" src="assets/xrdemo.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_Store Planning</h2>
+          </div>
+        </div>
+      </article>
+            <!-- Panel: XR Music -->
+      <article class="panel" data-panel="apartment">
+        <div class="panel-body">
+          <video class="panel-media" src="images/buscard.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_Apartment Tour</h2>
+          </div>
+        </div>
+      </article>
+                  <!-- Panel: XR Music -->
+      <article class="panel" data-panel="digitaltwin">
+        <div class="panel-body">
+          <video class="panel-media" src="assets/dc.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_Digital Twin Corelogic Lab</h2>
+          </div>
+        </div>
+      </article>
+
+  </div>
+      <!-- left/right arrow controls -->
+      <button class="panel-nav prev" aria-label="Previous panel">‹</button>
+      <button class="panel-nav next" aria-label="Next panel">›</button>
+    </div>
+
+    <!-- accessibility announcer for panel changes -->
+    <div id="panelAnnouncer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
 
   </section>
 
  <!--Portfolio Section
- ================================================== -->
+ ================================================== 
   <section id="vr">
 
     <div class="row section-intro">
@@ -150,7 +231,7 @@
 
       </div>
     </div>
-    <!-- /section-intro-->
+   /section-intro
     <div class="row">
       <div class="col-six">
 
@@ -173,7 +254,7 @@
 
 
   </section>
-  <!-- /portfolio -->
+   /portfolio -->
 
   <!-- Portfolio Section
    ================================================== -->
@@ -182,8 +263,7 @@
     <div class="row section-intro">
       <div class="col-twelve">
 
-        <h5>My Works</h5>
-        <p>If you want to learn more about my work, please reach out to me</p>
+        <h5>My Portoflio</h5>
 
       </div>
     </div>
@@ -379,7 +459,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
     </div>
     <!-- /project-->
 
-    <!-- project-->
+    <!-- project
     <div class="row" style="margin-bottom:8rem">
       <div class="col-six">
         <img src="./images/viz.gif">
@@ -393,25 +473,25 @@ I led the end-to-end product design for a hiring workflow automation tool that t
         </div>
       </div>
     </div>
-    <!-- /project-->
-    <!-- project-->
+    /project-->
+    <!-- project
     <div class="row reverse" style="margin-bottom:8rem">
       <div class="col-six description">
         <h2>Redesign NCSA AVL Website</h2>
         <p style="font-size:16px;">While interning at NCSA, I led the AVL website redesign project.  The team gave me the freedom to drive and make decisions on the research and design process.
         After the first 2 months of the intership, I delivered a new end-to-end web experience for the AVL website, and a prototype that implements WebVR technology to display their Cinmatic Visualization works on their website.
     </p>
-      <!--  <div class="col-six"><a class="button stroke" href="./avl.html">View Case Study</a>
-      </div> -->
+       <div class="col-six"><a class="button stroke" href="./avl.html">View Case Study</a>
+      </div>
         </div>
       <div class="col-six">
         <img src="./images/avlweb.png">
       </div>
     </div>
-    <!-- /project-->
+     /project-->
     <div class="row section-intro">
       <div class="col-twelve">
-        <h6>Old Design works (Professional and Personal)</h6>
+        <h6>Old works</h6>
       </div>
     </div>
     <!-- project-->
@@ -421,7 +501,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/terra.jpg">
             <h3>Terra</h3>
-            <p>NCSA Research Project (2017)</p>
+            <p>NCSA Research Project</p>
           </div>
         </a>
       </div>
@@ -430,7 +510,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/lasko1.png">
             <h3>Lasko</h3>
-            <p>Case Study (2017)</p>
+            <p>Case Study</p>
           </div>
         </a>
       </div>
@@ -439,7 +519,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/pawy.png">
             <h3>Pawy - Future Pet Adoption</h3>
-            <p>XR Case Study (2017)</p>
+            <p>XR Case Study</p>
           </div>
         </a>
       </div>
@@ -452,7 +532,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/cube2.png">
             <h3>Cubeconsulting.org</h3>
-            <p>Web Design (2016)</p>
+            <p>Web Design</p>
           </div>
         </a>
       </div>
@@ -461,7 +541,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/lightz.jpg">
             <h3>Lightz</h3>
-            <p>Case Study (2016)</p>
+            <p>Case Study</p>
           </div>
         </a>
       </div>
@@ -640,6 +720,450 @@ I led the end-to-end product design for a hiring workflow automation tool that t
       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #cc005f}";
       document.body.appendChild(css);
     };
+  </script>
+
+  <script>
+  (function(){
+    var section = document.getElementById('highlight');
+    if(!section) return;
+
+    var track = section.querySelector('.highlight-track');
+    if(!track) return;
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // panels and sizes
+    var panels = Array.prototype.slice.call(track.querySelectorAll('.panel'));
+    if(!panels.length) return;
+
+    // pagination removed per user request; navigation via arrows/keyboard/swipe only
+
+    var state = {
+      sectionTop: 0,
+      sectionHeight: 0,
+      trackWidth: 0,
+      viewportH: window.innerHeight,
+      panelWidth: 0,
+      maxTranslate: 0,
+      currentIndex: 0,
+      ticking: false,
+      isDragging: false,
+      dragStartX: 0,
+      dragCurrentX: 0,
+      dragDelta: 0
+    };
+
+    function measure(){
+      var rect = section.getBoundingClientRect();
+      state.sectionTop = rect.top + window.scrollY;
+      state.sectionHeight = Math.max(section.offsetHeight, rect.height);
+      state.trackWidth = track.scrollWidth;
+      state.viewportH = window.innerHeight;
+      state.panelWidth = section.clientWidth; // each panel is 100% of section
+      state.maxTranslate = Math.max(state.trackWidth - state.panelWidth, 0);
+    }
+
+    function setTranslate(tx, smooth){
+      if(smooth){ track.style.transition = 'transform 520ms cubic-bezier(.2,.9,.2,1)'; }
+      else { track.style.transition = 'none'; }
+      track.style.transform = 'translate3d(' + tx + 'px,0,0)';
+    }
+
+    function scrollToIndex(i){
+      i = Math.min(Math.max(0, i), panels.length - 1);
+      i = Math.min(Math.max(0, i), panels.length - 1);
+      // animation guard
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!prefersReduced){
+        section.classList.add('animating');
+        panels.forEach(function(p, idx){ p.classList.toggle('inactive', idx !== i); });
+        // allow CSS transitions to run then remove animating flag
+        setTimeout(function(){ section.classList.remove('animating'); }, 520);
+      } else {
+        panels.forEach(function(p, idx){ p.classList.toggle('inactive', idx !== i); });
+      }
+      state.currentIndex = i;
+      var tx = -Math.round(i * state.panelWidth);
+      setTranslate(tx, true);
+      announcePanel(i);
+      updateArrowVisibility();
+    }
+
+    function announcePanel(i){
+      var announcer = document.getElementById('panelAnnouncer');
+      if(!announcer) return;
+      var title = panels[i].querySelector('.panel-title');
+      var text = title ? title.textContent.trim() : ('Panel ' + (i+1));
+      announcer.textContent = 'Showing: ' + text;
+    }
+
+    // Map vertical scroll inside section to a panel index (snap)
+    function updateFromScroll(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var viewportCenter = scrollY + (state.viewportH / 2);
+      var sectionCenter = state.sectionTop + (state.sectionHeight / 2);
+
+      // Start translation only after viewport center passes section center
+      var delta = viewportCenter - sectionCenter;
+      if(delta <= 0){
+        // still before center: ensure first panel visible
+        if(state.currentIndex !== 0) scrollToIndex(0);
+        else setTranslate(0, false);
+        return;
+      }
+
+      // Map progress from 0..1 as viewportCenter moves from sectionCenter to sectionCenter + state.sectionHeight
+      var progress = delta / state.sectionHeight;
+      progress = Math.min(Math.max(progress, 0), 1);
+      var pos = progress * (panels.length - 1);
+      var index = Math.round(pos);
+      if(index !== state.currentIndex) {
+        scrollToIndex(index);
+        updateArrowVisibility();
+      }
+
+      // If we've reached the last panel and progress is at end, allow page to continue scrolling
+      if(index === panels.length - 1 && progress >= 1){
+        // release the page lock so user can scroll to next section
+        lockPageScroll(false);
+      }
+    }
+
+  // Provide simple click/keyboard-based controls (arrows + dots + keyboard arrows).
+  var btnPrev = section.querySelector('.panel-nav.prev');
+  var btnNext = section.querySelector('.panel-nav.next');
+  function onPrevClick(e){ e && e.preventDefault(); scrollToIndex(state.currentIndex - 1); }
+  function onNextClick(e){ e && e.preventDefault(); scrollToIndex(state.currentIndex + 1); }
+  // arrow listeners will be attached when the section is visible (IO) to avoid duplicates
+
+    function updateArrowVisibility(){
+      if(!btnPrev || !btnNext) return;
+      // hide prev on first panel, hide next on last panel
+      btnPrev.classList.toggle('hidden', state.currentIndex === 0);
+      btnNext.classList.toggle('hidden', state.currentIndex === (panels.length - 1));
+    }
+
+    // Keyboard navigation
+    function onKey(e){
+      if(e.key === 'ArrowRight') { scrollToIndex(state.currentIndex + 1); }
+      else if(e.key === 'ArrowLeft') { scrollToIndex(state.currentIndex - 1); }
+    }
+
+    // Setup listeners via IO
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(ent){
+          // measure first to have up-to-date geometry
+          measure();
+      if(ent.intersectionRatio >= 0.6){
+            // section visible: measure and ensure controls are available
+            measure();
+            window.addEventListener('resize', measure);
+            window.addEventListener('keydown', onKey);
+            // attach arrow handlers (they exist in DOM)
+            if(btnPrev) btnPrev.addEventListener('click', onPrevClick);
+            if(btnNext) btnNext.addEventListener('click', onNextClick);
+        // snap to first panel
+        scrollToIndex(0);
+            // Attach simple mobile swipe handlers (discrete swipe)
+            if(window.matchMedia('(max-width: 900px)').matches){
+              attachMobileSwipe();
+            }
+          } else {
+            // cleanup listeners when section not visible
+            window.removeEventListener('resize', measure);
+            window.removeEventListener('keydown', onKey);
+            if(btnPrev) btnPrev.removeEventListener('click', onPrevClick);
+            if(btnNext) btnNext.removeEventListener('click', onNextClick);
+            // reset track to first panel immediately
+            state.currentIndex = 0;
+            setTranslate(0, false);
+            announcePanel(0);
+          }
+        });
+      }, { threshold: [0, 0.25, 0.5, 0.6, 1] });
+      io.observe(section);
+    } else {
+      // Fallback for no IntersectionObserver: initialize controls and listeners
+      measure();
+      window.addEventListener('resize', measure);
+      window.addEventListener('keydown', onKey);
+      scrollToIndex(0);
+      if(window.matchMedia('(max-width: 900px)').matches){ attachMobileSwipe(); }
+    }
+
+    // pointer/touch-based dragging and scroll-driven mapping removed per request.
+
+    // ensure initial measurement
+  setTimeout(function(){ measure(); scrollToIndex(0); }, 120);
+  // ensure arrows reflect initial state
+  setTimeout(function(){ updateArrowVisibility && updateArrowVisibility(); }, 160);
+
+    // expose for debug
+    window.__highlightTrack = { measure: measure, scrollToIndex: scrollToIndex };
+    // Respect reduced motion by leaving native layout if requested
+    if(prefersReduced){ track.style.transition = 'none'; }
+
+    // page lock removed; lockPageScroll is a no-op
+    function lockPageScroll(_) { /* no-op */ }
+
+    // Mobile swipe handlers (discrete left/right swipe)
+    var touchStartX = 0;
+    function onTouchStart(e){ if(!e.touches) return; touchStartX = e.touches[0].clientX; }
+    function onTouchEnd(e){
+      var endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : null;
+      if(endX === null) return;
+      var dx = endX - touchStartX;
+      var threshold = state.panelWidth * 0.18; // 18% width
+      if(dx < -threshold) scrollToIndex(state.currentIndex + 1);
+      else if(dx > threshold) scrollToIndex(state.currentIndex - 1);
+    }
+    function attachMobileSwipe(){
+      track.addEventListener('touchstart', onTouchStart, {passive:true});
+      track.addEventListener('touchend', onTouchEnd, {passive:true});
+    }
+    function detachMobileSwipe(){
+      track.removeEventListener('touchstart', onTouchStart, {passive:true});
+      track.removeEventListener('touchend', onTouchEnd, {passive:true});
+    }
+
+  })();
+
+  (function(){
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.highlight-panels .panel'));
+    if(!panels.length) return;
+
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function setActive(el, active){
+      if(active) el.classList.add('is-active'); else el.classList.remove('is-active');
+    }
+
+    if(prefersReduced){
+      // If reduced motion requested, mark first panel active only
+      panels.forEach(function(p,i){ setActive(p, i===0); });
+      return;
+    }
+
+    // Use IO to detect which panel is centered in the viewport
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var el = entry.target;
+        // consider active when more than 45% of panel body is visible
+        if(entry.intersectionRatio > 0.45){
+          setActive(el, true);
+        } else {
+          setActive(el, false);
+        }
+      });
+    }, { root: null, threshold: [0, 0.25, 0.45, 0.6, 1] });
+
+    panels.forEach(function(p){ io.observe(p); });
+  })();
+  </script>
+
+  <script>
+  (function(){
+    var nav = document.getElementById('sideAnchorNav');
+    if(!nav) return;
+    var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+    var sections = links.map(function(l){ return document.getElementById(l.getAttribute('data-target')); }).filter(Boolean);
+
+    // hide nav while intro is showing
+    var intro = document.getElementById('intro');
+    function setNavHidden(hidden){ nav.classList.toggle('hidden-by-intro', !!hidden); }
+    if(intro && 'IntersectionObserver' in window){
+      var introIo = new IntersectionObserver(function(entries){ entries.forEach(function(e){ setNavHidden(e.isIntersecting); }); }, { root: null, threshold: 0.75 });
+      introIo.observe(intro);
+    } else if(intro){
+      function fallbackIntro(){ var rect = intro.getBoundingClientRect(); setNavHidden(rect.bottom > (window.innerHeight * 0.4)); }
+      window.addEventListener('scroll', fallbackIntro, {passive:true}); window.addEventListener('resize', fallbackIntro); setTimeout(fallbackIntro,50);
+    }
+
+    // helper to set active link by id
+    function setActiveId(id){
+      links.forEach(function(l){ var active = (l.getAttribute('data-target') === id); l.classList.toggle('active', active); if(active) l.setAttribute('aria-current','true'); else l.removeAttribute('aria-current'); });
+    }
+
+    // immediate click feedback + smooth scroll
+    links.forEach(function(link){
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        links.forEach(function(x){ x.classList.remove('active'); x.removeAttribute('aria-current'); });
+        this.classList.add('active'); this.setAttribute('aria-current','true');
+        var id = this.getAttribute('data-target'); var el = document.getElementById(id);
+        if(!el){ location.hash = id; return; }
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try{ history.replaceState(null, '', '#'+id); }catch(e){}
+      });
+    });
+
+    // Primary: IntersectionObserver-based active selection (keeps up/down consistent)
+    if('IntersectionObserver' in window && sections.length){
+      var ratios = {};
+      sections.forEach(function(s){ ratios[s.id] = 0; });
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(ent){ ratios[ent.target.id] = ent.intersectionRatio; });
+        // pick the section with highest ratio
+        var bestId = sections[0].id; var best = -1;
+        sections.forEach(function(s){ if(ratios[s.id] > best){ best = ratios[s.id]; bestId = s.id; } });
+        setActiveId(bestId);
+      }, { root: null, threshold: [0,0.25,0.5,0.75,1] });
+      sections.forEach(function(s){ io.observe(s); });
+      // initial heuristic run
+      setTimeout(function(){ sections.forEach(function(s){ var rect=s.getBoundingClientRect(); var viewportH=window.innerHeight||document.documentElement.clientHeight; var visibleTop=Math.max(rect.top,0); var visibleBottom=Math.min(rect.bottom,viewportH); ratios[s.id] = Math.max(0, visibleBottom-visibleTop); }); var bestId=sections[0].id; var bestV=-1; sections.forEach(function(s){ if(ratios[s.id]>bestV){ bestV=ratios[s.id]; bestId=s.id; } }); setActiveId(bestId); }, 60);
+    } else {
+      // Fallback: rAF-throttled visible-area calculation
+      function calcActive(){ var viewportH = window.innerHeight||document.documentElement.clientHeight; var best=null; var bestVisible=-1; sections.forEach(function(sec){ var rect = sec.getBoundingClientRect(); var visibleTop = Math.max(rect.top,0); var visibleBottom = Math.min(rect.bottom, viewportH); var visibleH = Math.max(0, visibleBottom-visibleTop); if(visibleH>bestVisible){ bestVisible=visibleH; best=sec; } }); setActiveId(best?best.id: (sections[0] && sections[0].id)); }
+      var ticking=false; function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(function(){ calcActive(); ticking=false; }); } }
+      window.addEventListener('scroll', onScroll, {passive:true}); window.addEventListener('resize', onScroll); setTimeout(calcActive,50);
+    }
+
+    // Prevent scrolling past footer (clamp)
+    (function(){ function clamp(){ var max = document.documentElement.scrollHeight - window.innerHeight; if(window.scrollY > max) window.scrollTo(0, Math.max(0, max)); } window.addEventListener('scroll', function(){ requestAnimationFrame(clamp); }, {passive:true}); window.addEventListener('resize', function(){ requestAnimationFrame(clamp); }); setTimeout(clamp, 300); })();
+
+  })();
+  </script>
+
+  <script>
+  // Optimized Parallax: writes CSS variables, uses rAF and IntersectionObserver to pause when not needed
+  (function(){
+    var intro = document.getElementById('intro');
+    if(!intro) return;
+
+    var layers = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+
+    var enabled = false;
+    var ticking = false;
+    var lastScroll = 0;
+    var introHeight = intro.offsetHeight || intro.getBoundingClientRect().height;
+
+    // Update CSS variables on intro and layers (cheap writes)
+    function apply(progress, scrollY){
+      // bg shift up to 30px
+      var bgShift = Math.round(progress * 30) + 'px';
+      // blur up to 4px
+      var blur = (progress * 4).toFixed(2) + 'px';
+      // fade (0..0.9) - amount to fade intro content
+      var fade = Math.min(progress * 0.9, 0.9).toFixed(3);
+
+      intro.style.setProperty('--intro-bg-shift', bgShift);
+      intro.style.setProperty('--intro-blur', blur);
+      intro.style.setProperty('--intro-fade', fade);
+
+      // layers: set each --parallax-ty variable
+      layers.forEach(function(el){
+        var speed = parseFloat(el.getAttribute('data-parallax')) || 0.25;
+        var ty = Math.round(-scrollY * speed) + 'px';
+        el.style.setProperty('--parallax-ty', ty);
+      });
+    }
+
+    function update(){
+      ticking = false;
+      var scrollY = window.scrollY || window.pageYOffset;
+      // recalc introHeight occasionally (on resize) if needed
+      introHeight = intro.offsetHeight || intro.getBoundingClientRect().height;
+      var progress = Math.min(Math.max(scrollY / Math.max(1, introHeight), 0), 1);
+      apply(progress, scrollY);
+    }
+
+    function onScroll(){
+      lastScroll = window.scrollY || window.pageYOffset;
+      if(!ticking){
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }
+
+    // Use IntersectionObserver to only enable scroll handler while intro is at least partially visible
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.intersectionRatio > 0){
+            if(!enabled){
+              enabled = true;
+              intro.classList.add('parallax-active');
+              window.addEventListener('scroll', onScroll, {passive:true});
+            }
+            // trigger an immediate update so visuals sync
+            requestAnimationFrame(update);
+          } else if(enabled){
+            enabled = false;
+            intro.classList.remove('parallax-active');
+            window.removeEventListener('scroll', onScroll, {passive:true});
+          }
+        });
+      }, { threshold: [0, 0.01] });
+      io.observe(intro);
+    } else {
+      // Fallback: always enable
+      enabled = true;
+      intro.classList.add('parallax-active');
+      window.addEventListener('scroll', onScroll, {passive:true});
+    }
+
+    // resize handling (debounced via rAF)
+    var resizeTick = false;
+    window.addEventListener('resize', function(){ if(!resizeTick){ resizeTick = true; requestAnimationFrame(function(){ introHeight = intro.offsetHeight || intro.getBoundingClientRect().height; resizeTick = false; }); } }, {passive:true});
+
+    // initial set
+    setTimeout(function(){ requestAnimationFrame(update); }, 80);
+  })();
+  </script>
+
+  <script>
+  (function(){
+    // Robust Scroll-to-Explore handler with fallbacks and safer scrolling
+    function findButton(){ return document.getElementById('scrollExploreBtn'); }
+
+    function findTarget(){
+      // prefer #highlight, fall back to #startup or first section after #intro
+      var t = document.getElementById('highlight') || document.getElementById('startup');
+      if(t) return t;
+      // fallback: first section after #intro
+      var intro = document.getElementById('intro');
+      if(intro){
+        var next = intro.nextElementSibling;
+        while(next){ if(next.tagName && next.id) return next; next = next.nextElementSibling; }
+      }
+      return null;
+    }
+
+    function doScrollTo(el){
+      if(!el) return;
+      // try native smooth scroll then fallback to manual animate
+      try{
+        el.scrollIntoView({behavior: 'smooth', block: 'start'});
+        // ensure hash updates
+        try{ history.replaceState(null, '', '#'+el.id); }catch(e){}
+      } catch(err){
+        // fallback: immediate scroll
+        var top = el.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo(0, Math.max(0, top - 10));
+        try{ history.replaceState(null, '', '#'+el.id); }catch(e){}
+      }
+    }
+
+    function bind(btn){
+      if(!btn) return;
+      btn.addEventListener('click', function(e){ e.preventDefault(); var t = findTarget(); if(!t){ console.warn('Scroll-to-Explore: target not found'); return; } doScrollTo(t); });
+      btn.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); var t = findTarget(); if(!t){ console.warn('Scroll-to-Explore: target not found'); return; } doScrollTo(t); } });
+    }
+
+    // Try immediate bind, otherwise delegate when DOM ready
+    var btn = findButton();
+    if(btn){ bind(btn); }
+    else {
+      // if button is rendered later, attach a delegated handler as fallback
+      document.addEventListener('click', function(e){
+        var el = e.target;
+        if(!el) return;
+        if(el.id === 'scrollExploreBtn' || el.closest && el.closest('#scrollExploreBtn')){
+          e.preventDefault(); var t = findTarget(); if(!t){ console.warn('Scroll-to-Explore: target not found'); return; } doScrollTo(t);
+        }
+      });
+    }
+  })();
   </script>
 
 </body>
