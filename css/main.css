@@ -1178,7 +1178,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   margin-bottom: 1.2rem;
 }
 
-.section-intro, .old-work h5 {
+.section-intro h5 {
   color: #cc005f;
   font-size: 1.6rem;
   line-height: 1.875;
@@ -1186,7 +1186,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   letter-spacing: .4rem;
 }
 
-
+.old-work h5 {
+  color: #cc005f;
+  font-size: 1.6rem;
+  line-height: 1.875;
+  margin-bottom: 0.3rem;
+  letter-spacing: .4rem;
+}
 /**
  * responsive:
  * common styles
