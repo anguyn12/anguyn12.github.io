@@ -1093,14 +1093,11 @@ I led the end-to-end product design for a hiring workflow automation tool that t
     function apply(progress, scrollY){
       // bg shift up to 30px
       var bgShift = Math.round(progress * 30) + 'px';
-      // blur up to 4px
-      var blur = (progress * 4).toFixed(2) + 'px';
-      // fade (0..0.9) - amount to fade intro content
+  // fade (0..0.9) - amount to fade intro content
       var fade = Math.min(progress * 0.9, 0.9).toFixed(3);
 
       intro.style.setProperty('--intro-bg-shift', bgShift);
-      intro.style.setProperty('--intro-blur', blur);
-      intro.style.setProperty('--intro-fade', fade);
+    intro.style.setProperty('--intro-fade', fade);
 
       // layers: set each --parallax-ty variable
       layers.forEach(function(el){

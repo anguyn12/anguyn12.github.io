@@ -2628,9 +2628,8 @@ bottom:-0.2%;
 /* Parallax helpers (variables + GPU hints) */
 #intro {
   will-change: background-position, opacity, filter;
-  /* CSS variables updated by JS: --intro-bg-shift (eg "12px"), --intro-blur (eg "2px"), --intro-fade (0..1) */
+  /* CSS variables updated by JS: --intro-bg-shift (eg "12px"), --intro-fade (0..1) */
   --intro-bg-shift: 0px;
-  --intro-blur: 0px;
   --intro-fade: 0;
   background-position: center calc(50% - var(--intro-bg-shift));
 }
@@ -2652,9 +2651,9 @@ bottom:-0.2%;
 /* Intro content fade + blur tied to scroll progress via CSS vars */
 .intro-content {
   opacity: calc(1 - var(--intro-fade));
-  filter: blur(var(--intro-blur));
+  /* blur disabled to avoid performance cost and unwanted visual effect */
   transition: opacity 120ms linear;
-  will-change: opacity, filter;
+  will-change: opacity;
 }
 
 /* subtle overlay to make movement feel deeper */
