@@ -1150,11 +1150,26 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-bottom: 5rem;
-  margin-top: 10rem;
+  margin-bottom: 10rem;
+  margin-top: 15rem;
   position: relative;
 }
-
+.old-work{
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+  position: relative;
+}
+.section-divider {
+  width: 80px;
+  height: 0;
+  margin: 0 auto 2.4rem auto;
+  border-top: 2px dashed rgba(204,0,95,0.85); /* uses the site's accent color */
+  opacity: 0.95;
+}
 .section-intro h1 {
   font-family: "poppins-semibold", serif;
   font-size: 3.6rem;
@@ -1163,13 +1178,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   margin-bottom: 1.2rem;
 }
 
-.section-intro h5 {
+.section-intro, .old-work h5 {
   color: #cc005f;
   font-size: 1.6rem;
   line-height: 1.875;
   margin-bottom: 0.3rem;
   letter-spacing: .4rem;
 }
+
 
 /**
  * responsive:
@@ -1865,7 +1881,7 @@ background: #f8f8f8 no-repeat center bottom;
  */
 
 
-#portfolio, #highlight, #vr {
+#works, #highlight, #vr {
   background: #FFFFFF;
     padding-top: 3rem;
   padding-bottom: 3rem;
