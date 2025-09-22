@@ -28,7 +28,7 @@
   <!-- script
    ================================================== -->
   <script src="js/modernizr.js"></script>
-  <script src="js/pace.min.js"></script>
+  <script src="js/pace.min.js" defer></script>
 
 
   <!-- favicons
@@ -137,7 +137,7 @@
     <div class="row section-intro">
       <div class="col-twelve">
         <h5>Bounderless Experience Design</h5>
-        <h1>I Design Experiences That Go Beyond 2D Screens</h1>
+        <h1>I design experiences that go beyond 2D screens</h1>
       </div>
     </div>
 
@@ -147,10 +147,10 @@
       <!-- Panel: Stage -->
       <article class="panel" data-panel="stage">
         <div class="panel-body">
-          <video class="panel-media" src="images/siggraphstage.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video class="panel-media lazy-video" data-src="images/siggraphstage.mp4" loop muted playsinline preload="none"></video>
           <div class="panel-overlay"></div>
           <div class="panel-content">
-            <h2 class="panel-title">_Stage</h2>
+            <h2 class="panel-title">_Interactive Stage</h2>
           </div>
             <!-- pagination dots were here; moved outside so they sit above content -->
         </div>
@@ -159,7 +159,7 @@
       <!-- Panel: Data Simulation -->
       <article class="panel" data-panel="simulation">
         <div class="panel-body">
-          <img class="panel-media" src="./images/viz.gif" alt="Interactive Prototype">
+          <img class="panel-media" src="./images/viz.gif" alt="Interactive Prototype" loading="lazy" data-src="./images/viz.gif">
           <div class="panel-overlay"></div>
           <div class="panel-content">
             <h2 class="panel-title">_Geospatial Data Simulation</h2>
@@ -170,7 +170,7 @@
       <!-- Panel: XR Music -->
       <article class="panel" data-panel="music">
         <div class="panel-body">
-          <video class="panel-media" src="assets/xrmusic.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video class="panel-media lazy-video" data-src="assets/xrmusic.mp4" loop muted playsinline preload="none"></video>
           <div class="panel-overlay"></div>
           <div class="panel-content">
             <h2 class="panel-title">_XR Music</h2>
@@ -180,7 +180,7 @@
                   <!-- Panel: XR Music -->
       <article class="panel" data-panel="store">
         <div class="panel-body">
-          <video class="panel-media" src="assets/xrdemo.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video class="panel-media lazy-video" data-src="assets/xrdemo.mp4" loop muted playsinline preload="none"></video>
           <div class="panel-overlay"></div>
           <div class="panel-content">
             <h2 class="panel-title">_Store Planning</h2>
@@ -190,7 +190,7 @@
             <!-- Panel: XR Music -->
       <article class="panel" data-panel="apartment">
         <div class="panel-body">
-          <video class="panel-media" src="images/buscard.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video class="panel-media lazy-video" data-src="images/buscard.mp4" loop muted playsinline preload="none"></video>
           <div class="panel-overlay"></div>
           <div class="panel-content">
             <h2 class="panel-title">_Apartment Tour</h2>
@@ -200,7 +200,7 @@
                   <!-- Panel: XR Music -->
       <article class="panel" data-panel="digitaltwin">
         <div class="panel-body">
-          <video class="panel-media" src="assets/dc.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video class="panel-media lazy-video" data-src="assets/dc.mp4" loop muted playsinline preload="none"></video>
           <div class="panel-overlay"></div>
           <div class="panel-content">
             <h2 class="panel-title">_Digital Twin Corelogic Lab</h2>
@@ -236,7 +236,7 @@
       <div class="col-six">
 
           <div class="brand-content">
-            <img src="./images/traffic.gif" alt="AR/VR">
+            <img src="./images/traffic.gif" alt="AR/VR" loading="lazy" data-src="./images/traffic.gif">
             <h3>Innovative Mind</h3>
             <p>I visualize the future for businesses via tangible futuristic prototypes with new technology and impactful experiments. </p>
               <a href="./xrproject.html">View prototypes here</a>
@@ -263,7 +263,7 @@
     <div class="row section-intro">
       <div class="col-twelve">
 
-        <h5>My Portoflio</h5>
+        <h5>My UX Product Design Works</h5>
 
       </div>
     </div>
@@ -462,7 +462,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
     <!-- project
     <div class="row" style="margin-bottom:8rem">
       <div class="col-six">
-        <img src="./images/viz.gif">
+  <img src="./images/viz.gif" loading="lazy" data-src="./images/viz.gif">
       </div>
       <div class="col-six description">
         <h2>VR Hazard Simulation Experience</h2>
@@ -500,8 +500,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
         <a href="./terra.html">
           <div class="startup-content">
             <img src="./images/terra.jpg">
-            <h3>Terra</h3>
-            <p>NCSA Research Project</p>
+            <h3>Terra - Satelite Visualization</h3>
           </div>
         </a>
       </div>
@@ -509,8 +508,7 @@ I led the end-to-end product design for a hiring workflow automation tool that t
         <a href="./lasko.html">
           <div class="startup-content">
             <img src="./images/lasko1.png">
-            <h3>Lasko</h3>
-            <p>Case Study</p>
+            <h3>Lasko - Space Heater UI/UX</h3>
           </div>
         </a>
       </div>
@@ -519,7 +517,6 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/pawy.png">
             <h3>Pawy - Future Pet Adoption</h3>
-            <p>XR Case Study</p>
           </div>
         </a>
       </div>
@@ -532,7 +529,6 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/cube2.png">
             <h3>Cubeconsulting.org</h3>
-            <p>Web Design</p>
           </div>
         </a>
       </div>
@@ -541,7 +537,6 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/lightz.jpg">
             <h3>Lightz</h3>
-            <p>Case Study</p>
           </div>
         </a>
       </div>
@@ -550,7 +545,6 @@ I led the end-to-end product design for a hiring workflow automation tool that t
           <div class="startup-content">
             <img src="./images/others.png">
             <h3>Others</h3>
-            <p>Graphic and Concept Design</p>
           </div>
         </a>
       </div>
@@ -658,9 +652,10 @@ I led the end-to-end product design for a hiring workflow automation tool that t
 -->
   <!-- Java Script
    ================================================== -->
-  <script src="js/jquery-2.1.3.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Defer non-critical scripts so they don't block first paint on mobile -->
+  <script src="js/jquery-2.1.3.min.js" defer></script>
+  <script src="js/plugins.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script>
     var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
@@ -723,6 +718,35 @@ I led the end-to-end product design for a hiring workflow automation tool that t
   </script>
 
   <script>
+  // Lazy-load videos when their panel is near entering the viewport
+  (function(){
+    var lazyVideos = [].slice.call(document.querySelectorAll('video.lazy-video'));
+    if(!lazyVideos.length) return;
+    if('IntersectionObserver' in window){
+      var vidObserver = new IntersectionObserver(function(entries, obs){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            var v = entry.target;
+            if(v.dataset && v.dataset.src){
+              v.src = v.dataset.src;
+              // try to set playsinline & muted for autoplay policies
+              v.setAttribute('playsinline','');
+              v.muted = true;
+              // load and play when metadata ready
+              v.addEventListener('loadedmetadata', function(){ try{ v.play(); }catch(e){} });
+              v.load();
+            }
+            obs.unobserve(v);
+          }
+        });
+      }, { root: null, rootMargin: '200px 0px 400px 0px', threshold: 0.01 });
+      lazyVideos.forEach(function(v){ vidObserver.observe(v); });
+    } else {
+      // Fallback: load all lazy videos after a short delay (to not block initial paint)
+      setTimeout(function(){ lazyVideos.forEach(function(v){ if(v.dataset && v.dataset.src){ v.src = v.dataset.src; v.muted = true; v.setAttribute('playsinline',''); try{ v.play(); }catch(e){} v.load(); } }); }, 800);
+    }
+  })();
+
   (function(){
     var section = document.getElementById('highlight');
     if(!section) return;
@@ -958,6 +982,30 @@ I led the end-to-end product design for a hiring workflow automation tool that t
     }, { root: null, threshold: [0, 0.25, 0.45, 0.6, 1] });
 
     panels.forEach(function(p){ io.observe(p); });
+  })();
+  </script>
+
+  <script>
+  // Lightweight image lazy-loading and small-screen background fix
+  (function(){
+    try{
+      // Native lazy attribute for modern browsers
+      if('loading' in HTMLImageElement.prototype){
+        document.querySelectorAll('img').forEach(function(img){ if(!img.hasAttribute('loading')) img.setAttribute('loading','lazy'); });
+      } else if('IntersectionObserver' in window){
+        // Polyfill-like lazy loader using data-src
+        var io = new IntersectionObserver(function(entries, obs){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              var img = entry.target;
+              if(img.dataset && img.dataset.src){ img.src = img.dataset.src; }
+              obs.unobserve(img);
+            }
+          });
+        }, { root: null, rootMargin: '200px 0px' });
+        document.querySelectorAll('img[data-src]').forEach(function(img){ io.observe(img); });
+      }
+    }catch(e){ /* ignore */ }
   })();
   </script>
 
