@@ -1178,6 +1178,59 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   margin-bottom: 1.2rem;
 }
 
+/* impact */
+#impact { padding: 6rem 0 4rem; }
+.testimonials-grid { max-width: 1300px; margin: 0 auto; display: flex; gap: 2.4rem; align-items: stretch; }
+.testimonial-card {
+  position: relative;
+  padding: 2.2rem 1.8rem;
+  min-height: 160px;
+  border-radius: 6px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  transform-origin: center;
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* sticky-note variants */
+.testimonial-card:nth-child(1) { background: #fff8cc; transform: rotate(-2deg); }
+.testimonial-card:nth-child(2) { background: #ffecec; transform: rotate(3deg); }
+.testimonial-card:nth-child(3) { background: #eaffef; transform: rotate(-1deg); }
+
+.testimonial-card:before {
+  /* faux tape */
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+  width: 64px;
+  height: 20px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,255,255,0.8));
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  opacity: 0.95;
+}
+
+.testimonial-card blockquote { margin: 0; font-style: normal; color: #222; }
+.testimonial-card blockquote p { font-size: 1.6rem; line-height: 1.5; margin-bottom: 1.1rem; font-family: "lora-regular", serif; }
+.testimonial-card cite { display:block; font-size: 1.2rem; color: #666; font-family: "poppins-regular", sans-serif; }
+.testimonial-card cite a { color: #cc005f; text-decoration: none; margin-left: .4rem; font-weight: 600; }
+
+/* Slight lift on hover for desktop */
+@media (hover: hover) and (pointer: fine) {
+  .testimonial-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 14px 34px rgba(0,0,0,0.14); }
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid { flex-direction: column; }
+  .testimonial-card { transform: none !important; box-shadow: 0 6px 18px rgba(0,0,0,0.06); margin-bottom: 1.6rem; }
+  .testimonial-card:before { display: none; }
+}
+
 .section-intro h5 {
   color: #cc005f;
   font-size: 1.6rem;
@@ -1896,7 +1949,9 @@ background: #f8f8f8 no-repeat center bottom;
   max-width:1300px;
 }
 
-
+#impact {
+    padding-bottom: 20rem;
+}
 /* pagination */
 
 /* pagination removed per user request */
