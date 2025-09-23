@@ -2791,12 +2791,19 @@ bottom:-0.2%;
   justify-content: center;
   cursor: pointer;
   font-size: 28px;
+  /* allow taps and disable unexpected gesture handling on mobile */
+  touch-action: manipulation;
 }
 .panel-nav.prev{ left: 1.6rem; top: calc(50% - 28px); }
 .panel-nav.next{ right: 1.6rem; top: calc(50% - 28px); }
 
 /* hide arrows when not applicable */
 .panel-nav.hidden { opacity: 0; pointer-events: none; visibility: hidden; transform: scale(0.9); transition: opacity 180ms ease, transform 180ms ease; }
+
+/* On small screens, ensure nav sits above potential overlays */
+@media (max-width: 900px){
+  .panel-nav{ z-index: 9999; }
+}
 
 /* smaller titles bottom-left */
 .panel-title {

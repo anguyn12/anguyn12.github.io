@@ -930,7 +930,18 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
   var btnNext = section.querySelector('.panel-nav.next');
   function onPrevClick(e){ e && e.preventDefault(); scrollToIndex(state.currentIndex - 1); }
   function onNextClick(e){ e && e.preventDefault(); scrollToIndex(state.currentIndex + 1); }
-  // arrow listeners will be attached when the section is visible (IO) to avoid duplicates
+  // Attach arrow listeners immediately to ensure mobile taps register (some mobile
+  // browsers may not always trigger the IO entry in the same timing). Use a guard
+  // to avoid double-attaching when IO also tries to attach.
+  var arrowsAttached = false;
+  function attachArrows(){
+    if(arrowsAttached) return;
+    if(btnPrev) btnPrev.addEventListener('click', onPrevClick);
+    if(btnNext) btnNext.addEventListener('click', onNextClick);
+    arrowsAttached = true;
+  }
+  // attach immediately (safe and reversible)
+  attachArrows();
 
     function updateArrowVisibility(){
       if(!btnPrev || !btnNext) return;
