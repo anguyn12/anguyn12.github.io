@@ -76,7 +76,8 @@
       </div>
       <!-- /top-bar -->
 
-    </div>
+  </div>
+  </div>
     <!-- /row -->
   </header> 
 
@@ -168,17 +169,6 @@
           </div>
         </div>
       </article>
-
-      <!-- Panel: XR Music -->
-      <article class="panel" data-panel="music">
-        <div class="panel-body">
-          <video class="panel-media lazy-video" data-src="assets/xrmusic.mp4" loop muted playsinline preload="none"></video>
-          <div class="panel-overlay"></div>
-          <div class="panel-content">
-            <h2 class="panel-title">_XR Music</h2>
-          </div>
-        </div>
-      </article>
                   <!-- Panel: XR Music -->
       <article class="panel" data-panel="store">
         <div class="panel-body">
@@ -189,6 +179,17 @@
           </div>
         </div>
       </article>
+      <!-- Panel: XR Music -->
+      <article class="panel" data-panel="music">
+        <div class="panel-body">
+          <video class="panel-media lazy-video" data-src="assets/xrmusic.mp4" loop muted playsinline preload="none"></video>
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_XR Music</h2>
+          </div>
+        </div>
+      </article>
+
             <!-- Panel: XR Music -->
       <article class="panel" data-panel="apartment">
         <div class="panel-body">
@@ -206,6 +207,16 @@
           <div class="panel-overlay"></div>
           <div class="panel-content">
             <h2 class="panel-title">_Digital Twin Corelogic Lab</h2>
+          </div>
+        </div>
+      </article>
+                        <!-- Panel: XR Music -->
+      <article class="panel" data-panel="digitaltwin">
+        <div class="panel-body">
+          <video class="panel-media lazy-video" data-src="./images/hvai.mp4" loop muted playsinline preload="none"></video>
+          <div class="panel-overlay"></div>
+          <div class="panel-content">
+            <h2 class="panel-title">_Virtual Hire Hiring Strategist (GPT)</h2>
           </div>
         </div>
       </article>
@@ -301,9 +312,54 @@ As Lead UX Designer for Indeed Hire, I drove the product design from concept to 
       <div class="col-six">
         <img src=".\images\cdg.png">
       </div>
-
+      
     </div>
+
+    <!-- Indeed highlights full-bleed band -->
+    <div class="indeed-highlights-band">
+      <div class="row indeed-highlights" style="margin-bottom:12rem">
+              <div class="row" style="justify-content:center;">
+        <div class="col-twelve" style="text-align:center; margin-bottom:1rem;">
+          <h2 class="section-title">Other Indeed highlights</h2>
+        </div>
+      </div>
+      <div class="col-four">
+        <a href="#" aria-label="Partner Developer AI" data-title="Partner Developer AI" data-link="https://www.figma.com/proto/XpDf4lCru6H1ZPFhP8f5ut/Knowledge-Assistant-AI-Chatbot?page-id=5%3A227&node-id=94-76097&viewport=-3793%2C681%2C0.2&t=tfMHaKAr6ve8x0sx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=94%3A76097"
+        data-desc="At the beginning of 2025, I designed the vision for Indeed Partner Dev AI, aiming to transform how third-party developers integrate with Indeed’s APIs. I introduced the team to the MCP (Multi-Context Protocol), inspired by Playwright’s browser automation capabilities, and proposed an AI-powered agent that could simulate integration steps, auto-navigate developer flows, and validate API configurations in real time. This agent concept allowed partner developers to self-onboard more efficiently—reducing reliance on internal support and accelerating time-to-integration. By connecting this vision to existing Jira workflows and designing early user journeys, I helped the team adopt new thinking around intelligent developer tools, laying the groundwork for long-term automation and scalability in partner success.">
+          <div class="startup-content">
+            <!-- video thumbnail: use a poster image so a visible thumbnail appears -->
+            <video class="panel-media" muted playsinline preload="none" width="100%" style="display:block;" poster="./images/devai.png">
+              <source src="./images/devai.mp4" type="video/mp4">
+              <!-- fallback poster image -->
+            </video>
+            <h4>Partner Developer AI</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-four">
+        <a href="#" aria-label="Indeed Partner Admin case study" data-title="Indeed Partner Admin Tool" 
+        data-desc="I led the redesign of the Partner Admin Tool to transform how internal teams manage partner integrations and post-launch engagement. By applying systems thinking and collaborating across product, engineering, and partner ops, I created a unified dashboard experience that streamlined onboarding workflows, enhanced visibility into integration health, and connected directly with Jira tickets to reduce manual tracking." >
+          <div class="startup-content">
+            <img src="./images/pat.png" alt="Indeed Partner Admin thumbnail" loading="lazy">
+            <h4>Partner Admin Tool</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-four">
+        <a href="#" aria-label="Hire Hiring Workflow Automation case study" data-title="Hiring Workflow Automation for Indeed Recruiting Agency
+" data-desc="I led the end-to-end product design for a hiring workflow automation tool that transformed how Indeed Hire's recruiters manage hiring processes for thousands of jobs across enterprise clients. By designing a recruiter-friendly, no-code configuration interface, I eliminated the need for engineering involvement, enabling recruiters to efficiently configure and adjust hiring workflows without writing a single line of code. This solution streamlined operations, reduced manual dependencies, and enhanced scalability, actively automating the hiring process for millions of Jobseekers. The project not only improved recruiter efficiency but also influenced strategic directions for other core Indeed products, shaping innovation roadmaps for FY 2024-2025.">
+          <div class="startup-content">
+            <img src="./images/hiringworkflow.png" alt="Hiring Workflow thumbnail" loading="lazy">
+            <h4>Hiring Workflow Automation</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    
     <!--/ project-->
+
 
     <!-- project
     <div class="row " style="margin-bottom:8rem">
@@ -341,28 +397,10 @@ As Lead UX Designer at Indeed Hire, collaborating with cross-functional teams an
 
     </div>
     <!--/ project-->
+
     <!-- project-->
     <div class="row reverse" style="margin-bottom:8rem">
-
-      <div class="col-six description">
-        <h3>Hiring Workflow Automation for Indeed Recruiting Agency </h3>
-        <p style="font-size:16px;">
-I led the end-to-end product design for a hiring workflow automation tool that transformed how Indeed Hire's recruiters manage hiring processes for thousands of jobs across enterprise clients. By designing a recruiter-friendly, no-code configuration interface, I eliminated the need for engineering involvement, enabling recruiters to efficiently configure and adjust hiring workflows without writing a single line of code. This solution streamlined operations, reduced manual dependencies, and enhanced scalability, actively automating the hiring process for millions of Jobseekers. The project not only improved recruiter efficiency but also influenced strategic directions for other core Indeed products, shaping innovation roadmaps for FY 2024-2025.
-       </p>
-      </div>
-      <div class="col-six">
-        <img src=".\images\hiringworkflow.png">
-</video>
-      </div>
-    </div>
-    <!--/ project-->
-
-    <!-- project-->
-    <div class="row" style="margin-bottom:8rem">
-      <div class="col-six">
-        <img src="./images/mjfree.png">
-      </div>
-      <div class="col-six description">
+            <div class="col-six description">
         <h3> Cannabis Retail Point of Sales Platform</h3>
         <p style="font-size:16px;">I acted as Lead UX and Product Manager to launch the end-to-end tablet solutions for a streamline Cannabis Retail Point of Sales Experience.
         Our targeted user group is the budtender who needs to provide the best customer services while performing fulfillment and manage their order queue.
@@ -373,11 +411,19 @@ I led the end-to-end product design for a hiring workflow automation tool that t
         <div class="col-six"><a class="button stroke" href="https://mjplatform.com/cannabis-seed-to-sale-software/retail/">Learn More</a>
         </div>
       </div>
+      <div class="col-six">
+        <img src="./images/mjfree.png">
+      </div>
+
     </div>
     <!--/ project-->
     <!-- project-->
-    <div class="row reverse" style="margin-bottom:8rem">
-      <div class="col-six description">
+    <div class="row" style="margin-bottom:8rem">
+
+      <div class="col-six">
+        <img src="./images/port.png">
+      </div>
+            <div class="col-six description">
         <h3>Mortgage Portfolio Monitoring Platform</h3>
         <p style="font-size:16px;">As a UX and Data Visualization Designer in the team,
            I helped Corelogic launch their Porfolio Monitoring application.
@@ -387,17 +433,11 @@ I led the end-to-end product design for a hiring workflow automation tool that t
         <div class="col-six"><a class="button stroke" href="https://www.cotality.com/products/portfolio-intelligence-and-monitoring">Learn More</a>
         </div>
       </div>
-      <div class="col-six">
-        <img src="./images/port.png">
-      </div>
     </div>
     <!-- /project-->
     <!-- project-->
-    <div class="row" style="margin-bottom:8rem">
-      <div class="col-six">
-        <img src="./images/greenwood.png">
-      </div>
-      <div class="col-six description">
+    <div class="row reverse" style="margin-bottom:8rem">
+            <div class="col-six description">
         <h3>Greenwood Bank App</h3>
         <p style="font-size:16px;">Partnering with Greenwood Bank, I led the design and product team to deliver end-to-end banking experience for Black and Latinos community.
           The app is launched in iOS, Android, and web for PC.
@@ -407,12 +447,19 @@ I led the end-to-end product design for a hiring workflow automation tool that t
         <div class="col-six"><a class="button stroke" href="https://bankgreenwood.com/">Learn More</a>
         </div>
       </div>
+      <div class="col-six">
+        <img src="./images/greenwood.png">
+      </div>
+
 
     </div>
     <!-- /project-->
     <!-- project-->
-    <div class="row reverse" style="margin-bottom:8rem">
-      <div class="col-six description">
+    <div class="row" style="margin-bottom:8rem">
+      <div class="col-six">
+        <img src="./images/lunayou.png">
+      </div>
+            <div class="col-six description">
         <h3>Maternal Wellbeing Platform</h3>
         <p style="font-size:16px;">
           As a lead UX designer, I worked closely with our product owner to deliver an end-to-end
@@ -421,19 +468,13 @@ I led the end-to-end product design for a hiring workflow automation tool that t
         <div class="col-six"><a class="button stroke" href="https://robotsandpencils.com/work/healthcare/lunayou/">Learn More</a>
         </div>
       </div>
-      <div class="col-six">
-        <img src="./images/lunayou.png">
-      </div>
 
     </div>
     <!-- /project-->
 
     <!-- project-->
-    <div class="row" style="margin-bottom:8rem">
-      <div class="col-six">
-        <img src="./images/studentapp.png">
-      </div>
-      <div class="col-six description">
+    <div class="row reverse" style="margin-bottom:8rem">
+            <div class="col-six description">
         <h3>White Label College Student Experience</h3>
         <p style="font-size:16px;">
         As Robots and Pencils is building a white label Student experience partner with the top US colleges,
@@ -442,20 +483,25 @@ I led the end-to-end product design for a hiring workflow automation tool that t
          I worked closely with our CEO, EdTech and Product leader to make sure our team can meet our business and clients' vision. </br>
         </p>
       </div>
+      <div class="col-six">
+        <img src="./images/studentapp.png">
+      </div>
+
 
     </div>
     <!-- /project-->
     <!-- project-->
-    <div class="row reverse" style="margin-bottom:8rem">
+    <div class="row" style="margin-bottom:8rem">
+            <div class="col-six">
+        <img src="./images/wgu.png">
+      </div>
       <div class="col-six description">
         <h3>College Catalog Feature Design and Vision Strategy</h3>
         <p style="font-size:16px;">As a lead UX designer for WGU Dynamic Catalog team, I helped launch the new College Course Catalog and proposed strategy to help student discover their personalize academic journey.
           We actively conducted A/B testing with our active students and defined the right solution that is most effective for our students.
         I also drove WGU's vision design for their upcoming student's reports, services and academic planning features</p>
       </div>
-      <div class="col-six">
-        <img src="./images/wgu.png">
-      </div>
+
 
     </div>
     <!-- /project-->
@@ -788,6 +834,121 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #cc005f}";
       document.body.appendChild(css);
     };
+  </script>
+
+  <!-- Media modal for highlight previews -->
+  <div id="mediaModal" class="media-modal" aria-hidden="true" role="dialog" aria-label="Media preview">
+    <div class="media-modal__overlay" data-close="true"></div>
+    <div class="media-modal__wrap" role="document">
+      <button class="media-modal__close" aria-label="Close preview">×</button>
+      <div class="media-modal__content" tabindex="0"></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    // Lightweight lightbox for the indeed highlights
+    var modal = document.getElementById('mediaModal');
+    if(!modal) return;
+    var overlay = modal.querySelector('.media-modal__overlay');
+    var content = modal.querySelector('.media-modal__content');
+    var closeBtn = modal.querySelector('.media-modal__close');
+
+    function showModal(node){
+      // clear
+      content.innerHTML = '';
+      // build grid: visual (left) + details (right)
+      var grid = document.createElement('div'); grid.className = 'media-modal__grid';
+      var visual = document.createElement('div'); visual.className = 'media-modal__visual';
+      var detailsWrap = document.createElement('div'); detailsWrap.className = 'media-modal__details';
+
+      // clone node for safe read, then find image/video and text
+      var clone = node.cloneNode(true);
+      var img = clone.querySelector('img');
+      var vid = clone.querySelector('video');
+
+      if(vid){
+        var v = document.createElement('video');
+        v.controls = true; v.playsInline = true; v.autoplay = true; v.muted = false;
+        v.style.width = '100%'; v.style.height = 'auto';
+        var src = vid.querySelector('source') ? vid.querySelector('source').src : vid.getAttribute('src') || vid.dataset.src;
+        if(src){ var s = document.createElement('source'); s.src = src; s.type = 'video/mp4'; v.appendChild(s); }
+        visual.appendChild(v);
+        try{ v.play(); }catch(e){}
+      } else if(img){
+        var i = document.createElement('img');
+        // prefer a high-res source if provided on the original anchor (data-fullsrc)
+        var anchor = node.closest && node.closest('a') ? node.closest('a') : null;
+        var full = anchor && anchor.getAttribute('data-fullsrc');
+        i.src = full || img.getAttribute('src') || img.dataset.src || img.getAttribute('data-src');
+        i.alt = img.alt || '';
+        i.style.width = '100%'; i.style.height = 'auto';
+        visual.appendChild(i);
+      } else if(node.tagName === 'VIDEO'){
+        var v2 = node.cloneNode(true); v2.controls = true; v2.style.width = '100%'; visual.appendChild(v2); try{ v2.play(); }catch(e){}
+      }
+
+      // Extract title, paragraph, and any link from the card. Prefer explicit data-* on the anchor
+      var anchor = node.closest && node.closest('a') ? node.closest('a') : null;
+      var titleEl = clone.querySelector('h3') || clone.querySelector('h2') || clone.querySelector('h4');
+      var descEl = clone.querySelector('p');
+      var linkEl = clone.querySelector('a') ? clone.querySelector('a').getAttribute('href') : null;
+
+      // If data attributes exist on the anchor, prefer them (keeps details off-page)
+      var dataTitle = anchor && anchor.getAttribute('data-title');
+      var dataDesc = anchor && anchor.getAttribute('data-desc');
+      var dataLink = anchor && anchor.getAttribute('data-link');
+
+      if(dataTitle || (titleEl && titleEl.textContent.trim())){
+        var h = document.createElement('h3');
+        h.textContent = (dataTitle ? dataTitle : (titleEl ? titleEl.textContent.trim() : ''));
+        detailsWrap.appendChild(h);
+      }
+      if(dataDesc || descEl){
+        var p = document.createElement('p');
+        p.textContent = (dataDesc ? dataDesc : (descEl ? descEl.textContent.trim() : ''));
+        detailsWrap.appendChild(p);
+      }
+      var finalLink = dataLink || linkEl;
+      if(finalLink){ var a = document.createElement('a'); a.href = finalLink; a.className = 'button stroke'; a.textContent = 'View prototype'; a.target = '_blank'; a.rel='noopener'; detailsWrap.appendChild(a); }
+
+      grid.appendChild(visual); grid.appendChild(detailsWrap);
+      content.appendChild(grid);
+
+      modal.setAttribute('aria-hidden','false');
+      modal.classList.add('is-open');
+      // focus the content for accessibility
+      content.focus();
+      // trap simple key handler
+      document.addEventListener('keydown', onKey);
+    }
+
+    function hideModal(){
+      // pause any video inside
+      var v = content.querySelector('video'); if(v){ try{ v.pause(); }catch(e){} }
+      content.innerHTML = '';
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden','true');
+      document.removeEventListener('keydown', onKey);
+    }
+
+    function onKey(e){ if(e.key === 'Escape') hideModal(); }
+
+    // attach click handlers to highlight anchors
+    var highlights = document.querySelectorAll('.indeed-highlights a');
+    highlights.forEach(function(a){
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        // find the inner startup-content to extract media
+        var card = a.querySelector('.startup-content') || a;
+        showModal(card);
+      });
+    });
+
+    // overlay and close
+    overlay.addEventListener('click', hideModal);
+    closeBtn.addEventListener('click', hideModal);
+  })();
   </script>
 
   <script>
