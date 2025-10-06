@@ -3039,8 +3039,17 @@ bottom:-0.2%;
   border-radius: 6px;
   margin-bottom: 0.75rem;
 }
+/* Make the first Indeed highlight visually larger */
+.indeed-highlight-large .startup-content img,
+.indeed-highlight-large .startup-content video{
+  height: 320px; /* roughly double the height */
+}
+.indeed-stack { display: flex; flex-direction: column; gap: 1rem; }
+.indeed-stack .col-full { width: 100%; }
 @media (max-width: 900px){
   .indeed-highlights{ padding: 1.2rem; }
   .indeed-highlights .startup-content img,
   .indeed-highlights .startup-content video{ height: 140px; }
+  .indeed-highlight-large .startup-content img, .indeed-highlight-large .startup-content video{ height: 160px; }
+  .indeed-stack { gap: 0.6rem; }
 }
