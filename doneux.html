@@ -1121,6 +1121,9 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
     if(arrowsAttached) return;
     if(btnPrev) btnPrev.addEventListener('click', onPrevClick);
     if(btnNext) btnNext.addEventListener('click', onNextClick);
+    // iOS/touch fallback events
+    if(btnPrev) { btnPrev.addEventListener('touchend', onPrevClick, {passive:false}); btnPrev.addEventListener('pointerup', onPrevClick); }
+    if(btnNext) { btnNext.addEventListener('touchend', onNextClick, {passive:false}); btnNext.addEventListener('pointerup', onNextClick); }
     arrowsAttached = true;
   }
   // attach immediately (safe and reversible)
@@ -1153,6 +1156,9 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
             // attach arrow handlers (they exist in DOM)
             if(btnPrev) btnPrev.addEventListener('click', onPrevClick);
             if(btnNext) btnNext.addEventListener('click', onNextClick);
+            // ensure touch/pointer fallbacks are attached as well
+            if(btnPrev){ btnPrev.addEventListener('touchend', onPrevClick, {passive:false}); btnPrev.addEventListener('pointerup', onPrevClick); }
+            if(btnNext){ btnNext.addEventListener('touchend', onNextClick, {passive:false}); btnNext.addEventListener('pointerup', onNextClick); }
         // snap to first panel
         scrollToIndex(0);
             // Attach simple mobile swipe handlers (discrete swipe)
@@ -1163,8 +1169,8 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
             // cleanup listeners when section not visible
             window.removeEventListener('resize', measure);
             window.removeEventListener('keydown', onKey);
-            if(btnPrev) btnPrev.removeEventListener('click', onPrevClick);
-            if(btnNext) btnNext.removeEventListener('click', onNextClick);
+            if(btnPrev) { btnPrev.removeEventListener('click', onPrevClick); btnPrev.removeEventListener('touchend', onPrevClick); btnPrev.removeEventListener('pointerup', onPrevClick); }
+            if(btnNext) { btnNext.removeEventListener('click', onNextClick); btnNext.removeEventListener('touchend', onNextClick); btnNext.removeEventListener('pointerup', onNextClick); }
             // reset track to first panel immediately
             state.currentIndex = 0;
             setTranslate(0, false);

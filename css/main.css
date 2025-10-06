@@ -2800,7 +2800,8 @@ bottom:-0.2%;
 
 /* On small screens, ensure nav sits above potential overlays */
 @media (max-width: 900px){
-  .panel-nav{ z-index: 9999; }
+  /* Ensure arrow buttons sit above any media or overlays on small screens (iPhone Safari) */
+  .panel-nav{ z-index: 20000; }
 }
 
 /* smaller titles bottom-left */
@@ -3039,17 +3040,8 @@ bottom:-0.2%;
   border-radius: 6px;
   margin-bottom: 0.75rem;
 }
-/* Make the first Indeed highlight visually larger */
-.indeed-highlight-large .startup-content img,
-.indeed-highlight-large .startup-content video{
-  height: 320px; /* roughly double the height */
-}
-.indeed-stack { display: flex; flex-direction: column; gap: 1rem; }
-.indeed-stack .col-full { width: 100%; }
 @media (max-width: 900px){
   .indeed-highlights{ padding: 1.2rem; }
   .indeed-highlights .startup-content img,
   .indeed-highlights .startup-content video{ height: 140px; }
-  .indeed-highlight-large .startup-content img, .indeed-highlight-large .startup-content video{ height: 160px; }
-  .indeed-stack { gap: 0.6rem; }
 }
