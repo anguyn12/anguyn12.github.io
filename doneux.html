@@ -1113,17 +1113,28 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
   var btnNext = section.querySelector('.panel-nav.next');
   function onPrevClick(e){ e && e.preventDefault(); scrollToIndex(state.currentIndex - 1); }
   function onNextClick(e){ e && e.preventDefault(); scrollToIndex(state.currentIndex + 1); }
-  // Attach arrow listeners immediately to ensure mobile taps register (some mobile
-  // browsers may not always trigger the IO entry in the same timing). Use a guard
+  // Normalize input events and debounce to avoid double-firing (click + touchend)
+  var __lastArrowTime = 0; var __arrowDebounce = 350; /* ms */
+  function handlePrevEvent(e){
+    // prevent default for touch events so click doesn't also fire in some browsers
+    if(e && (e.type === 'touchend' || e.type === 'pointerup')){ if(e.cancelable) e.preventDefault(); }
+    var now = Date.now(); if(now - __lastArrowTime < __arrowDebounce) return; __lastArrowTime = now; onPrevClick(e);
+  }
+  function handleNextEvent(e){
+    if(e && (e.type === 'touchend' || e.type === 'pointerup')){ if(e.cancelable) e.preventDefault(); }
+    var now = Date.now(); if(now - __lastArrowTime < __arrowDebounce) return; __lastArrowTime = now; onNextClick(e);
+  }
+
+  // Attach arrow listeners immediately to ensure mobile taps register. Use a guard
   // to avoid double-attaching when IO also tries to attach.
   var arrowsAttached = false;
   function attachArrows(){
     if(arrowsAttached) return;
-    if(btnPrev) btnPrev.addEventListener('click', onPrevClick);
-    if(btnNext) btnNext.addEventListener('click', onNextClick);
-    // iOS/touch fallback events
-    if(btnPrev) { btnPrev.addEventListener('touchend', onPrevClick, {passive:false}); btnPrev.addEventListener('pointerup', onPrevClick); }
-    if(btnNext) { btnNext.addEventListener('touchend', onNextClick, {passive:false}); btnNext.addEventListener('pointerup', onNextClick); }
+    if(btnPrev) btnPrev.addEventListener('click', handlePrevEvent);
+    if(btnNext) btnNext.addEventListener('click', handleNextEvent);
+    // touch/pointer fallbacks for mobile
+    if(btnPrev) { btnPrev.addEventListener('touchend', handlePrevEvent, {passive:false}); btnPrev.addEventListener('pointerup', handlePrevEvent); }
+    if(btnNext) { btnNext.addEventListener('touchend', handleNextEvent, {passive:false}); btnNext.addEventListener('pointerup', handleNextEvent); }
     arrowsAttached = true;
   }
   // attach immediately (safe and reversible)
@@ -1154,11 +1165,11 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
             window.addEventListener('resize', measure);
             window.addEventListener('keydown', onKey);
             // attach arrow handlers (they exist in DOM)
-            if(btnPrev) btnPrev.addEventListener('click', onPrevClick);
-            if(btnNext) btnNext.addEventListener('click', onNextClick);
+            if(btnPrev) btnPrev.addEventListener('click', handlePrevEvent);
+            if(btnNext) btnNext.addEventListener('click', handleNextEvent);
             // ensure touch/pointer fallbacks are attached as well
-            if(btnPrev){ btnPrev.addEventListener('touchend', onPrevClick, {passive:false}); btnPrev.addEventListener('pointerup', onPrevClick); }
-            if(btnNext){ btnNext.addEventListener('touchend', onNextClick, {passive:false}); btnNext.addEventListener('pointerup', onNextClick); }
+            if(btnPrev){ btnPrev.addEventListener('touchend', handlePrevEvent, {passive:false}); btnPrev.addEventListener('pointerup', handlePrevEvent); }
+            if(btnNext){ btnNext.addEventListener('touchend', handleNextEvent, {passive:false}); btnNext.addEventListener('pointerup', handleNextEvent); }
         // snap to first panel
         scrollToIndex(0);
             // Attach simple mobile swipe handlers (discrete swipe)
@@ -1169,8 +1180,8 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
             // cleanup listeners when section not visible
             window.removeEventListener('resize', measure);
             window.removeEventListener('keydown', onKey);
-            if(btnPrev) { btnPrev.removeEventListener('click', onPrevClick); btnPrev.removeEventListener('touchend', onPrevClick); btnPrev.removeEventListener('pointerup', onPrevClick); }
-            if(btnNext) { btnNext.removeEventListener('click', onNextClick); btnNext.removeEventListener('touchend', onNextClick); btnNext.removeEventListener('pointerup', onNextClick); }
+            if(btnPrev) { btnPrev.removeEventListener('click', handlePrevEvent); btnPrev.removeEventListener('touchend', handlePrevEvent); btnPrev.removeEventListener('pointerup', handlePrevEvent); }
+            if(btnNext) { btnNext.removeEventListener('click', handleNextEvent); btnNext.removeEventListener('touchend', handleNextEvent); btnNext.removeEventListener('pointerup', handleNextEvent); }
             // reset track to first panel immediately
             state.currentIndex = 0;
             setTranslate(0, false);
