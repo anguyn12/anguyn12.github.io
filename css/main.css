@@ -399,6 +399,22 @@ img.pull-right {
   margin: .9rem 0 0 2.4rem;
 }
 
+/* Featured project card overlay */
+.featured-project{ position:relative; border-radius:12px; overflow:hidden; }
+.featured-project img{ width:100%; height:auto; display:block; object-fit:cover; }
+.featured-card{ position:absolute; right:1.6rem; bottom:0; max-width:40%; background:rgba(255,255,255,0.98); padding:1.4rem 1.6rem 1.6rem 1.6rem; border-top-left-radius:12px; border-top-right-radius:12px; border-bottom-right-radius:0; border-bottom-left-radius:0; box-shadow:0 8px 30px rgba(0,0,0,0.12); }
+.featured-card h3{ margin:0 0 .6rem 0; font-family:"poppins-semibold", sans-serif; font-size:1.9rem; color:#222; }
+.featured-card .featured-desc{ margin:0 0 1rem 0; font-size:1.5rem; color:#555; font-family:"poppins-regular", sans-serif; }
+.featured-card .button{ margin:0; }
+
+@media only screen and (max-width:768px){
+  /* On small screens make the card stack below the image and match other project layout */
+  .featured-card{ position:static; right:auto; bottom:auto; max-width:100%; padding:0 0 1.6rem 0; margin:0; background:transparent; box-shadow:none; border-radius:0; }
+  .featured-card h3{ font-size:1.6rem; margin-top:1.2rem; }
+  .featured-card .featured-desc{ font-size:1.4rem; margin-bottom:1rem; }
+  .featured-card .button{ display:inline-block; margin-top:0.6rem; }
+}
+
 img.pull-left {
   margin: .9rem 2.4rem 0 0;
 }
