@@ -406,6 +406,10 @@ img.pull-right {
 .featured-card h3{ margin:0 0 .6rem 0; font-family:"poppins-semibold", sans-serif; font-size:1.9rem; color:#222; }
 .featured-card .featured-desc{ margin:0 0 1rem 0; font-size:1.5rem; color:#6e6e6e; font-family:"poppins-regular", sans-serif; }
 .featured-card .button{ margin:0; }
+.featured-card-actions{ display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap; margin-top:0.4rem; }
+.featured-card-actions .button{ margin:0; }
+.appstore-badge img{ height:4rem; width:auto; display:block; }
+.appstore-badge:hover img{ opacity:0.8; }
 
 @media only screen and (max-width:768px){
   /* On small screens make the card stack below the image and match other project layout */
