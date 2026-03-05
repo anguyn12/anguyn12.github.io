@@ -2833,10 +2833,22 @@ bottom:-0.2%;
 /* hide arrows when not applicable */
 .panel-nav.hidden { opacity: 0; pointer-events: none; visibility: hidden; transform: scale(0.9); transition: opacity 180ms ease, transform 180ms ease; }
 
-/* On small screens, ensure nav sits above potential overlays */
+/* On small screens, ensure nav sits above potential overlays and has a large tap target */
 @media (max-width: 900px){
-  /* Ensure arrow buttons sit above any media or overlays on small screens (iPhone Safari) */
-  .panel-nav{ z-index: 20000; }
+  .panel-nav{
+    z-index: 20000;
+    width: 48px;
+    height: 48px;
+    font-size: 26px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  /* Expand invisible tap area by 14px on every side */
+  .panel-nav::before{
+    content: '';
+    position: absolute;
+    inset: -14px;
+  }
 }
 
 /* smaller titles bottom-left */
