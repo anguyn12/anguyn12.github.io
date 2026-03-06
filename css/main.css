@@ -35,7 +35,8 @@ html, body {
 }
 
 /* Disable horizontal scrolling for the whole page */
-html, body { overflow-x: hidden; }
+html { overflow-x: hidden; }
+body { overflow-x: clip; } /* clip instead of hidden so transformed cards can fly off-screen */
 
 body {
   background: #fff;
@@ -399,25 +400,183 @@ img.pull-right {
   margin: .9rem 0 0 2.4rem;
 }
 
+/* =============================================
+   SCROLL-FLY FEATURED PROJECTS
+   ============================================= */
+
+/* Outer wrapper — just stacks the three triggers vertically */
+.stack-cards {
+  position: relative;
+}
+
+/* Each trigger is tall so the sticky card has room to sit while you scroll */
+.stack-trigger {
+  position: relative;
+  height: 160vh;   /* card rests for 60vh then exits over the next 100vh */
+}
+
+/* The card sticks inside its trigger */
+.stack-card {
+  position: sticky;
+  top: 6vh;
+  height: 88vh;
+  display: flex;
+  align-items: stretch;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.18), 0 6px 24px rgba(0,0,0,0.10);
+  will-change: transform, opacity;
+  /* Bouncy spring-like easing — responds immediately, overshoots slightly */
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity   0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0 4rem;   /* breathing room on the sides */
+}
+
+.stack-card__media {
+  flex: 1 1 55%;
+  min-width: 0;
+  overflow: hidden;
+  background: #111;
+}
+.stack-card__media img,
+.stack-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.stack-card__info {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 4rem 3.6rem 4rem;
+  overflow-y: auto;
+  background: #fff;
+}
+.stack-card__info h3 {
+  font-family: "poppins-semibold", sans-serif;
+  font-size: 2.4rem;
+  color: #111;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+.stack-card__info .featured-desc {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 1.4rem 0;
+}
+.stack-card__info .featured-impact {
+  margin: 0 0 1.6rem 0;
+  border-top: 1px solid #eee;
+  padding-top: .8rem;
+}
+.stack-card__info .featured-card-actions {
+  padding-top: 1.2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .stack-trigger { height: 280vh; }
+  .stack-card { flex-direction: column; height: auto; min-height: 80vh; margin: 0 1.2rem; top: 4vh; }
+  .stack-card__media { flex: none; height: 45vw; min-height: 180px; }
+  .stack-card__info { flex: none; padding: 2.4rem 2rem; overflow-y: auto; }
+  .stack-card__info h3 { font-size: 1.8rem; }
+}
+
+/* =============================================
+   END SCROLL-FLY FEATURED PROJECTS
+   ============================================= */
+
 /* Featured project card overlay */
-.featured-project{ position:relative; border-radius:12px; overflow:hidden; transform:translateZ(0); -webkit-mask-image:-webkit-radial-gradient(white,black); mask-image:radial-gradient(white,black); }
+.featured-project-outer{ display:flex; align-items:flex-end; }
+.featured-project{ position:relative; border-radius:12px; transform:translateZ(0); box-shadow:0 20px 60px rgba(0,0,0,0.22), 0 6px 20px rgba(0,0,0,0.12); flex:1 1 auto; min-width:0; }
+.featured-project-wrap{ padding-bottom:12rem; }
 .featured-project img,
 .featured-project video{ width:100%; height:auto; display:block; object-fit:cover; border-radius:12px; transform:translateZ(0); }
-.featured-card{ position:absolute; right:1.6rem; bottom:0; max-width:40%; background:rgba(255,255,255,0.98); padding:1.4rem 1.6rem 1.6rem 1.6rem; border-top-left-radius:12px; border-top-right-radius:12px; border-bottom-right-radius:0; border-bottom-left-radius:0; box-shadow:0 8px 30px rgba(0,0,0,0.12); }
+.featured-card{ position:relative; z-index:2; flex:0 0 46%; margin-left:-8rem; margin-bottom:3rem; background:#fff; padding:2rem 2.4rem 2.4rem 2.4rem; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.13); }
 .featured-card h3{ margin:0 0 .6rem 0; font-family:"poppins-semibold", sans-serif; font-size:1.9rem; color:#222; }
 .featured-card .featured-desc{ margin:0 0 1rem 0; font-size:1.5rem; color:#6e6e6e; font-family:"poppins-regular", sans-serif; }
 .featured-card .button{ margin:0; }
 .featured-card-actions{ display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap; margin-top:0.4rem; }
 .featured-card-actions .button{ margin:0; }
 .appstore-badge img{ height:4rem; width:auto; display:block; }
+
+/* Structured project description styles */
+.featured-desc-label{ margin:0 0 .4rem 0; font-family:"poppins-semibold", sans-serif; font-size:1.1rem; letter-spacing:.12em; text-transform:uppercase; color:#cc005f; }
+.featured-desc{ font-size:1.5rem; color:#555; line-height:1.7; margin:0 0 1.4rem 0; font-family:"poppins-regular", sans-serif; }
+.featured-meta{ margin:.4rem 0 .8rem 0; }
+.featured-meta-row{ display:flex; gap:.2rem; align-items:baseline; }
+.featured-meta-label{ font-family:"poppins-semibold", sans-serif; font-size:1.2rem; color:#222; flex-shrink:0; }
+
+/* Role tag pill */
+.role-tag {
+  display: inline-block;
+  padding: .3rem .9rem;
+  border-radius: 999px;
+  font-family: "poppins-semibold", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: #f3e4ea;
+  color: #b5234e;
+}
+.role-tag.role-tag--default {
+  background: #ebebeb;
+  color: #444;
+}
+.featured-impact{ margin:.4rem 0 2rem 0; border-top:1px solid #eee; padding-top:.6rem; }
+.featured-impact .featured-meta-label{ display:block; margin-bottom:.4rem; font-size:1.1rem; letter-spacing:.1em; text-transform:uppercase; color:#b5234e; }
+.featured-impact ul{ margin:0; padding-left:1.4rem; list-style:disc; }
+.featured-impact ul li{ font-size:1.4rem; color:#6e6e6e; font-family:"poppins-regular", sans-serif; margin-bottom:.3rem; line-height:1.5; }
+.featured-meta-value{ font-size:1.4rem; color:#6e6e6e; font-family:"poppins-regular", sans-serif; }
 .appstore-badge:hover img{ opacity:0.8; }
 
 @media only screen and (max-width:768px){
-  /* On small screens make the card stack below the image and match other project layout */
-  .featured-card{ position:static; right:auto; bottom:auto; max-width:100%; padding:0 0 1.6rem 0; margin:0; background:transparent; box-shadow:none; border-radius:0; }
+  /* On small screens stack image and card vertically */
+  .featured-project-outer{ flex-direction:column; gap:1.6rem; }
+  .featured-project{ flex:none; width:100%; }
+  .featured-card{ position:static; transform:none; max-width:100%; padding:0 0 1.6rem 0; margin:0; background:transparent; box-shadow:none; border-radius:0; }
   .featured-card h3{ font-size:1.6rem; margin-top:1.2rem; }
   .featured-card .featured-desc{ font-size:1.4rem; margin-bottom:1rem; }
   .featured-card .button{ display:inline-block; margin-top:0.6rem; }
+}
+
+/* Poppins font across all project descriptions in #works */
+#works h3,
+#works h2 {
+  font-family: "poppins-semibold", sans-serif;
+}
+#works p,
+#works li,
+#works .featured-desc,
+#works .featured-meta-value,
+#works .col-six.description p,
+#works .stack-card__info p,
+#works .stack-card__info li {
+  font-family: "poppins-regular", sans-serif;
+}
+#works .featured-meta-label,
+#works .featured-desc-label {
+  font-family: "poppins-semibold", sans-serif;
+  color: #222;
+}
+#works .featured-impact .featured-meta-label {
+  font-family: "poppins-semibold", sans-serif !important;
+  color: #b5234e !important;
+  text-transform: uppercase !important;
+  letter-spacing: .1em !important;
+  font-size: 1.1rem !important;
+}
+
+/* Strip col-six grid behaviour from button wrappers inside description columns */
+#works .col-six.description .col-six,
+#works .col-six.description + .col-six .col-six {
+  width: auto;
+  float: none;
+  padding: 0;
+  margin: 0 .8rem .8rem 0;
+  display: inline-block;
 }
 
 /* Make other WORKS project text sizes match featured card on mobile */
@@ -1182,7 +1341,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .section-intro {
-  max-width: 1300px;
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -1505,6 +1664,57 @@ transition: 0.18s ease;
 margin-bottom: 0.75rem;
 }
 .startup-content:hover { box-shadow: 0 8px 18px rgba(204,0,95,0.14); }
+
+/* ── Old works horizontal scroll strip ─────────────────────────────────── */
+.old-works-strip {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  gap: 0;
+  margin-top: 0;
+  margin-bottom: 6rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+}
+.old-works-strip::-webkit-scrollbar { display: none; }
+
+.old-work-thumb {
+  position: relative;
+  flex: 0 0 360px;
+  width: 360px;
+  height: 360px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+}
+.old-work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.old-work-thumb:hover img { transform: scale(1.05); }
+
+.old-work-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem .9rem .7rem .9rem;
+  font-family: "poppins-semibold", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: right;
+  line-height: 1.3;
+  background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, transparent 100%);
+  pointer-events: none;
+}
+/* ── End old works strip ────────────────────────────────────────────────── */
 .brand-content {
 transition: 0.3s;
   font-family: "poppins-medium", sans-serif;
@@ -3051,11 +3261,49 @@ bottom:-0.2%;
   align-items: start;
 }
 .media-modal__visual{ width: 100%; }
-.media-modal__details{ padding: 8px 0; }
+.media-modal__details{ padding: 8px 0; overflow-y: auto; max-height: 70vh; }
 .media-modal__details h3{ margin-top: 0; margin-bottom: 0.8rem; }
 .media-modal__details p{ color: #444; margin-bottom: 1rem; line-height: 1.5; }
 .media-modal__details .button{ display: inline-block; margin-top: 0.4rem; }
-@media (max-width:900px){ .media-modal__grid{ grid-template-columns: 1fr; } .media-modal__details{ padding-top: 12px; } }
+/* Structured modal content inherits featured-card styles */
+.media-modal__details .featured-desc-label{ margin-bottom: 0.4rem; }
+.media-modal__details .featured-meta{ margin: 0.8rem 0 1rem 0; }
+.media-modal__details .featured-meta-value{ font-size: 1.4rem; }
+/* Impact label in modal — same as featured card: uppercase, pink, semibold */
+.media-modal__details .featured-impact .featured-meta-label{
+  font-family: "poppins-semibold", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #b5234e;
+  display: block;
+  margin-bottom: .5rem;
+  min-width: unset;
+}
+/* Impact bullets in modal */
+.media-modal__details .featured-impact ul{ margin: 0; padding-left: 1.4rem; list-style: disc; }
+.media-modal__details .featured-impact ul li{
+  font-size: 1.4rem;
+  font-family: "poppins-regular", sans-serif;
+  color: #6e6e6e;
+  margin-bottom: .35rem;
+  line-height: 1.6;
+}
+/* Description in modal — match featured card */
+.media-modal__details .featured-desc{
+  font-family: "poppins-regular", sans-serif;
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 1.4rem 0;
+}
+/* featured-impact spacing in modal */
+.media-modal__details .featured-impact{
+  margin: 0 0 1.4rem 0;
+  border-top: 1px solid #eee;
+  padding-top: .7rem;
+}
+@media (max-width:900px){ .media-modal__grid{ grid-template-columns: 1fr; } .media-modal__details{ padding-top: 12px; max-height: none; } }
 
 /* Modal details typography - prefer Poppins (local font loaded in head) */
 .media-modal__details h3 {
@@ -3066,10 +3314,10 @@ bottom:-0.2%;
   color: #111;
 }
 .media-modal__details p {
-  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  color: #222;
+  font-family: "poppins-regular", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #555;
   margin-bottom: 1rem;
 }
 .indeed-highlights .startup-content{
