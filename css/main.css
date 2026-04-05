@@ -3341,3 +3341,161 @@ bottom:-0.2%;
   .indeed-highlights .startup-content img,
   .indeed-highlights .startup-content video{ height: 140px; }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   DARK THEME
+   Applied via class="dark-theme" on <body>
+   ══════════════════════════════════════════════════════════════════ */
+body.dark-theme {
+  background: #0b0f1a;
+  color: #c8cfe0;
+}
+
+/* Global text colours */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 { color: #e8edf8; }
+
+body.dark-theme p { color: #a8b4cc; }
+
+body.dark-theme a,
+body.dark-theme a:visited { color: #c8cfe0; }
+
+/* Section backgrounds */
+body.dark-theme section,
+body.dark-theme #intro,
+body.dark-theme #highlight,
+body.dark-theme #works,
+body.dark-theme #impact,
+body.dark-theme #contact { background: #0b0f1a; }
+
+/* Intro typewriter */
+body.dark-theme #intro .intro-content h1 { color: #e8edf8; }
+body.dark-theme #intro .intro-content h5 { color: #cc005f !important; }
+
+/* Side nav */
+body.dark-theme .side-anchor-nav { background: transparent; }
+body.dark-theme .side-anchor-nav a {
+  color: #c8cfe0 !important;
+  background: rgba(20,25,39,0.92) !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+body.dark-theme .side-anchor-nav a:hover {
+  background: rgba(204,0,95,0.15) !important;
+  color: #fff !important;
+}
+body.dark-theme .side-anchor-nav a.active {
+  color: #ff4d8f !important;
+  background: rgba(204,0,95,0.15) !important;
+}
+
+/* Section intro */
+body.dark-theme .section-intro h1,
+body.dark-theme .section-intro h1 { color: #e8edf8 !important; }
+body.dark-theme .section-intro h5 { color: #cc005f !important; }
+
+/* Stack cards (featured projects) */
+body.dark-theme .stack-card {
+  background: #141927;
+  box-shadow:
+    0 0 0 1px rgba(80,140,255,0.04),
+    0 8px 32px rgba(50,100,255,0.08),
+    0 24px 80px rgba(30,60,180,0.12),
+    0 2px 8px rgba(0,0,0,0.3);
+}
+body.dark-theme .stack-card__info {
+  background: #141927 !important;
+}
+body.dark-theme .stack-card__info h3 { color: #e8edf8 !important; }
+body.dark-theme .stack-card__info .featured-desc { color: #a8b4cc !important; }
+body.dark-theme .stack-card__info .featured-impact ul li { color: #8a97b4 !important; }
+body.dark-theme .stack-card__info .featured-impact { border-top-color: rgba(255,255,255,0.08) !important; }
+
+/* Project rows (side-by-side) */
+body.dark-theme .col-six.description h3 { color: #e8edf8; }
+body.dark-theme .col-six.description .featured-desc { color: #a8b4cc; }
+body.dark-theme .col-six.description .featured-impact ul li { color: #8a97b4; }
+
+/* Featured desc / meta global */
+body.dark-theme .featured-desc { color: #a8b4cc; }
+body.dark-theme .featured-meta-value { color: #8a97b4; }
+
+/* Role tag */
+body.dark-theme .role-tag { background: #2a1a26; color: #e0789e; }
+body.dark-theme .role-tag.role-tag--default { background: #1c2233; color: #8a97b4; }
+
+/* Featured impact label stays pink — already set with !important */
+
+/* Featured impact border */
+body.dark-theme .featured-impact { border-top-color: rgba(255,255,255,0.08); }
+
+/* Indeed highlights band */
+body.dark-theme .indeed-highlights-band { background: #0e1320; }
+body.dark-theme .indeed-highlights-band .section-title {
+  background: #1c2233 !important;
+  color: #e8edf8 !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4) !important;
+}
+body.dark-theme .indeed-highlights-band .section-title::before { display: none; }
+body.dark-theme .indeed-highlights .startup-content { background: #141927; border-radius: 10px; }
+body.dark-theme .indeed-highlights .startup-content h4 {
+  color: #c8cfe0 !important;
+  font-size: 1.4rem !important;
+  font-family: "poppins-regular", sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  margin-top: 0.6rem !important;
+}
+body.dark-theme .indeed-highlights .startup-content p { color: #8a97b4 !important; }
+body.dark-theme .indeed-highlights a { color: #c8cfe0 !important; }
+body.dark-theme .indeed-highlights a:hover { color: #fff !important; }
+
+/* Buttons */
+body.dark-theme .button.stroke {
+  border-color: rgba(200,207,224,0.35);
+  color: #c8cfe0;
+}
+body.dark-theme .button.stroke:hover {
+  background: rgba(200,207,224,0.1);
+  border-color: #c8cfe0;
+  color: #fff;
+}
+
+/* Testimonial cards */
+body.dark-theme .testimonial-card { background: #141927 !important; box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+body.dark-theme .testimonial-card blockquote p { color: #a8b4cc; }
+body.dark-theme .testimonial-card cite { color: #5e6e90; }
+
+/* Contact section */
+body.dark-theme #contact h5 { color: #e8edf8; }
+body.dark-theme #contact p,
+body.dark-theme #contact a { color: #8a97b4; }
+body.dark-theme .contact-info .icon i { color: #e0789e; }
+
+/* Section divider */
+body.dark-theme .section-divider { border-top-color: rgba(204,0,95,0.4); }
+
+/* Old works label */
+body.dark-theme .old-work h5 { color: #5e6e90; }
+
+/* Footer */
+body.dark-theme footer { background: #060912 !important; }
+
+/* Modal */
+body.dark-theme .media-modal__wrap {
+  background: #141927;
+  color: #c8cfe0;
+}
+body.dark-theme .media-modal__details h3 { color: #e8edf8; }
+body.dark-theme .media-modal__details p { color: #a8b4cc; }
+body.dark-theme .media-modal__details .featured-impact ul li { color: #8a97b4; }
+body.dark-theme .media-modal__close { color: #a8b4cc; }
+body.dark-theme .media-modal__overlay { background: rgba(6,9,18,0.88); }
+
+/* Scroll explore button */
+body.dark-theme .scroll-explore .btn { color: #a8b4cc; }
+
+/* ── End dark theme ──────────────────────────────────────────────── */
