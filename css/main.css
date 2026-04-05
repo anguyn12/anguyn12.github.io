@@ -3473,7 +3473,7 @@ body.dark-theme .testimonial-card cite { color: #5e6e90; }
 body.dark-theme #contact h5 { color: #e8edf8; }
 body.dark-theme #contact p,
 body.dark-theme #contact a { color: #8a97b4; }
-body.dark-theme .contact-info .icon i { color: #e0789e; }
+body.dark-theme .contact-info .icon i { color: #cc005f !important; }
 
 /* Section divider */
 body.dark-theme .section-divider { border-top-color: rgba(204,0,95,0.4); }
@@ -3486,14 +3486,22 @@ body.dark-theme footer { background: #060912 !important; }
 
 /* Modal */
 body.dark-theme .media-modal__wrap {
-  background: #141927;
-  color: #c8cfe0;
+  background: #141927 !important;
+  color: #c8cfe0 !important;
 }
-body.dark-theme .media-modal__details h3 { color: #e8edf8; }
-body.dark-theme .media-modal__details p { color: #a8b4cc; }
-body.dark-theme .media-modal__details .featured-impact ul li { color: #8a97b4; }
-body.dark-theme .media-modal__close { color: #a8b4cc; }
-body.dark-theme .media-modal__overlay { background: rgba(6,9,18,0.88); }
+body.dark-theme .media-modal__content { background: #141927 !important; }
+body.dark-theme .media-modal__details h3 { color: #e8edf8 !important; }
+body.dark-theme .media-modal__details p { color: #a8b4cc !important; }
+body.dark-theme .media-modal__details .featured-desc { color: #a8b4cc !important; }
+body.dark-theme .media-modal__details .featured-impact ul li { color: #8a97b4 !important; }
+body.dark-theme .media-modal__details .featured-impact { border-top-color: rgba(255,255,255,0.08) !important; }
+body.dark-theme .media-modal__close {
+  color: #a8b4cc !important;
+  background: #1c2233 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+body.dark-theme .media-modal__close:hover { background: #242e45 !important; }
+body.dark-theme .media-modal__overlay { background: rgba(6,9,18,0.88) !important; }
 
 /* Scroll explore button */
 body.dark-theme .scroll-explore .btn { color: #a8b4cc; }
