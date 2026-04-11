@@ -1913,9 +1913,9 @@ background: #f8f8f8 no-repeat center bottom;
 .intro-content h1 {
   color: #333333;
   font-family: "poppins-medium", sans-serif;
-  font-size: 8.4rem;
-  line-height: 1.071;
-  max-width: 900px;
+  font-size: 6.4rem !important;
+  line-height: 1.5;
+  max-width: 800px;
   margin-top: 0;
   margin-bottom: .6rem;
   margin-left: 0;
@@ -2014,7 +2014,7 @@ background: #f8f8f8 no-repeat center bottom;
 
 @media only screen and (max-width:1024px) {
   .intro-content h1 {
-    font-size: 7.6rem;
+    font-size: 5.6rem;
     margin-left: auto;
   }
   .intro-social {
@@ -2030,7 +2030,7 @@ background: #f8f8f8 no-repeat center bottom;
     min-height: 660px;
   }
   .intro-content h1 {
-    font-size: 5.2rem;
+    font-size: 4.2rem;
     margin-left: auto;
   }
   .intro-content h5 {
@@ -2052,7 +2052,7 @@ background: #f8f8f8 no-repeat center bottom;
     min-height: 600px;
   }
   .intro-content h1 {
-    font-size: 4.6rem;
+    font-size: 3.6rem;
     margin-bottom: .6rem;
     margin-left: auto;
   }
@@ -2186,11 +2186,11 @@ background: #f8f8f8 no-repeat center bottom;
 
 #works, #highlight, #vr {
   background: #FFFFFF;
-    padding-top: 3rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   margin-top: 3rem;
   margin: auto;
-  max-width:1300px;
+  max-width: 1300px;
 }
 
 #impact {
@@ -3099,7 +3099,8 @@ bottom:-0.2%;
 /* visually hidden helper for aria-live announcer */
 .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; border: 0; padding: 0; margin: -1px; }
 .highlight-panels.horizontal .panel + .panel{ margin-top: 0; }
-.highlight-panels.horizontal .panel-body{ position: relative; height: 100%; top: 0; }
+.highlight-panels.horizontal .panel-body{ position: relative; height: auto; top: 0; }
+.highlight-panels.horizontal .panel { min-height: 0; align-self: stretch; }
 
 .panel {
   position: relative;
@@ -3111,15 +3112,22 @@ bottom:-0.2%;
 .highlight-panels { --panel-gap: 4.5rem; }
 .panel-body {
   position: sticky;
-  top: 8vh; /* leave a bit of top space */
-  height: calc(80vh - 8vh);
-  /* allow the title to poke outside the media area */
-  overflow: visible;
-  background: #fff;
+  top: 8vh;
+  height: 60vh;
+  overflow: hidden;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: transform, opacity;
+  width: 100%;
+  line-height: 0;
+}
+.panel .panel-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 .panel-title {
   position: absolute;
@@ -3141,12 +3149,6 @@ bottom:-0.2%;
   inset: 0;
   z-index: 2;
 }
-.panel .panel-media {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 .panel .panel-content {
   position: absolute;
   z-index: 4;
@@ -3162,7 +3164,7 @@ bottom:-0.2%;
 @media (max-width: 900px){
   .highlight-panels { --panel-gap: 2.25rem; }
   .panel-title { font-size: 6.6vw; left: 6%; bottom: 6%; transform: none; }
-  .panel-body { height: auto; position: relative; top: auto; overflow: visible; }
+  .panel-body { height: 50vw; position: relative; top: auto; overflow: hidden; }
 }
 
 /* Respect reduced motion preferences: remove transforms/animations */
@@ -3371,6 +3373,8 @@ body.dark-theme #highlight,
 body.dark-theme #works,
 body.dark-theme #impact,
 body.dark-theme #contact { background: #0b0f1a; }
+
+body.dark-theme .panel-body { background: #000; }
 
 /* Intro typewriter */
 body.dark-theme #intro .intro-content h1 { color: #e8edf8; }
