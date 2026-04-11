@@ -2014,7 +2014,7 @@ background: #f8f8f8 no-repeat center bottom;
 
 @media only screen and (max-width:1024px) {
   .intro-content h1 {
-    font-size: 5.6rem;
+    font-size: 5.6rem !important;
     margin-left: auto;
   }
   .intro-social {
@@ -2030,7 +2030,7 @@ background: #f8f8f8 no-repeat center bottom;
     min-height: 660px;
   }
   .intro-content h1 {
-    font-size: 4.2rem;
+    font-size: 4.2rem !important;
     margin-left: auto;
   }
   .intro-content h5 {
@@ -2052,7 +2052,7 @@ background: #f8f8f8 no-repeat center bottom;
     min-height: 600px;
   }
   .intro-content h1 {
-    font-size: 3.6rem;
+    font-size: 2.6rem !important;
     margin-bottom: .6rem;
     margin-left: auto;
   }
