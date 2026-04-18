@@ -1443,11 +1443,13 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
       document.getElementById('stackTrigger0'),
       document.getElementById('stackTrigger1'),
       document.getElementById('stackTrigger2'),
+      document.getElementById('stackTrigger3'),
     ];
     var cards = [
       document.getElementById('stackCard0'),
       document.getElementById('stackCard1'),
       document.getElementById('stackCard2'),
+      document.getElementById('stackCard3'),
     ];
     if(!triggers[0] || !cards[0]) return;
 
@@ -1455,7 +1457,8 @@ It was extremely lucky to have Dawn on my team, and i cannot wait to hear about 
     var exits = [
       [-120, -60, -18],  /* card 0 → up-left  */
       [ 120, -60,  18],  /* card 1 → up-right */
-      [   0,   0,   0],  /* card 2 → never exits */
+      [-120, -60, -18],  /* card 2 (Locobe) → up-left */
+      [   0,   0,   0],  /* card 3 → never exits */
     ];
 
     function clamp(v,a,b){ return Math.min(Math.max(v,a),b); }
